@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Explora Costa Rica — an interactive, animated map of Costa Rica's territorial divisions (7 provinces, 84 cantons, ~490 districts), built as a free static site. It's a personal learning project as well as a public social-service tool, so code should stay simple and readable over clever.
 
-The project is currently in **Phase 0 (skeleton)** — see [PLAN.md](PLAN.md) for the full phased build plan (Phase 0 through Phase 7) and the architecture rules it commits to. Read PLAN.md before starting work on map rendering, animation, or the data pipeline — it defines the intended design up front, including phases not yet built.
+The project has completed **Phase 1 (data pipeline)** — see [PLAN.md](PLAN.md) for the full phased build plan (Phase 0 through Phase 7) and the architecture rules it commits to. Read PLAN.md before starting work on map rendering, animation, or the data pipeline — it defines the intended design up front, including phases not yet built.
 
 ## Commands
 
@@ -15,16 +15,17 @@ npm run dev        # start dev server (http://localhost:3000)
 npm run build       # static export build (output: "export" in next.config.ts)
 npm run start        # serve the production build
 npm run lint          # next lint
-npm run validate       # tsx scripts/validate.ts — asserts province/canton counts against lib/divisiones.ts
+npm run build:topo     # regenerate all data files from the IGN WFS source (scripts/build-topo.mts)
+npm run validate        # data-integrity checks: counts, unique codes/slugs, topo consistency, size budget
 ```
 
-There is no test runner configured yet. `npm run validate` is the closest thing to a data-integrity check — run it after touching `data/divisiones.seed.json` or `lib/divisiones.ts`.
+There is no test runner configured yet. `npm run validate` is the closest thing to a test suite — run it after touching anything under `data/` or `lib/divisiones.ts`.
 
 ## Architecture
 
 **Routing is state.** Every view is a URL, statically generated via `generateStaticParams`: `/` (country) → `/[provincia]` → `/[provincia]/[canton]` → (planned) `/[provincia]/[canton]/[distrito]`. There is no client-side selection state that isn't reflected in the route — page components derive everything from `params`.
 
-**Data layer:** `lib/divisiones.ts` exports `provincias` (typed as `Provincia[]`/`Canton[]`) read from `data/divisiones.seed.json`, plus lookup helpers `getProvincia(slug)` and `getCanton(provinciaSlug, cantonSlug)`. This seed file is a Phase 0 placeholder — Phase 1 replaces it with a generated `data/divisiones.json` (full hierarchy) and `data/geo/costa-rica.topo.json` (merged, simplified TopoJSON with three layers: provincias/cantones/distritos), per the pipeline documented in [scripts/fetch-geo.md](scripts/fetch-geo.md). Don't hand-edit the seed file into a full dataset — that's what the Phase 1 pipeline (`scripts/build-topo.ts`, not yet written) is for.
+**Data layer:** `data/divisiones.json` (full hierarchy: 7 provincias / 84 cantones / 494 distritos, with accent-safe slugs), `data/slugs.json` (flat region index with URL paths), and `data/geo/costa-rica.topo.json` (three TopoJSON layers — provincias/cantones/distritos — that share arcs because cantons and provinces are dissolved from the district geometry) are all **generated files**. Never hand-edit them; regenerate with `npm run build:topo`, which downloads the official IGN SNIT WFS district layer (cached in the gitignored `data/geo/raw/`), simplifies with mapshaper, and derives everything from that single source (see [scripts/fetch-geo.md](scripts/fetch-geo.md)). `lib/divisiones.ts` exposes the hierarchy plus lookup helpers `getProvincia` / `getCanton` / `getDistrito`.
 
 **Static export target:** `next.config.ts` sets `output: "export"`, so this must stay a fully static site — no server components that require a runtime, no API routes, no dynamic (non-generateStaticParams) rendering.
 

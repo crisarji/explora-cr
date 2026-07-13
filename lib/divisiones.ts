@@ -1,9 +1,16 @@
-import seed from "@/data/divisiones.seed.json";
+import divisiones from "@/data/divisiones.json";
+
+export interface Distrito {
+  codigo: string;
+  nombre: string;
+  slug: string;
+}
 
 export interface Canton {
   codigo: string;
   nombre: string;
   slug: string;
+  distritos: Distrito[];
 }
 
 export interface Provincia {
@@ -13,7 +20,9 @@ export interface Provincia {
   cantones: Canton[];
 }
 
-export const provincias: Provincia[] = seed.provincias;
+export const fuente: string = divisiones.fuente;
+
+export const provincias: Provincia[] = divisiones.provincias;
 
 export function getProvincia(slug: string): Provincia | undefined {
   return provincias.find((p) => p.slug === slug);
@@ -26,4 +35,16 @@ export function getCanton(
   const provincia = getProvincia(provinciaSlug);
   const canton = provincia?.cantones.find((c) => c.slug === cantonSlug);
   return provincia && canton ? { provincia, canton } : undefined;
+}
+
+export function getDistrito(
+  provinciaSlug: string,
+  cantonSlug: string,
+  distritoSlug: string
+):
+  | { provincia: Provincia; canton: Canton; distrito: Distrito }
+  | undefined {
+  const match = getCanton(provinciaSlug, cantonSlug);
+  const distrito = match?.canton.distritos.find((d) => d.slug === distritoSlug);
+  return match && distrito ? { ...match, distrito } : undefined;
 }

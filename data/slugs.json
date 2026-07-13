@@ -1,0 +1,3512 @@
+[
+ {
+  "tipo": "provincia",
+  "codigo": "1",
+  "nombre": "San José",
+  "path": "/san-jose"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "101",
+  "nombre": "San José",
+  "path": "/san-jose/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10101",
+  "nombre": "Carmen",
+  "path": "/san-jose/san-jose/carmen"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10102",
+  "nombre": "Merced",
+  "path": "/san-jose/san-jose/merced"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10103",
+  "nombre": "Hospital",
+  "path": "/san-jose/san-jose/hospital"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10104",
+  "nombre": "Catedral",
+  "path": "/san-jose/san-jose/catedral"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10105",
+  "nombre": "Zapote",
+  "path": "/san-jose/san-jose/zapote"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10106",
+  "nombre": "San Francisco de Dos Ríos",
+  "path": "/san-jose/san-jose/san-francisco-de-dos-rios"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10107",
+  "nombre": "Uruca",
+  "path": "/san-jose/san-jose/uruca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10108",
+  "nombre": "Mata Redonda",
+  "path": "/san-jose/san-jose/mata-redonda"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10109",
+  "nombre": "Pavas",
+  "path": "/san-jose/san-jose/pavas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10110",
+  "nombre": "Hatillo",
+  "path": "/san-jose/san-jose/hatillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10111",
+  "nombre": "San Sebastián",
+  "path": "/san-jose/san-jose/san-sebastian"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "102",
+  "nombre": "Escazú",
+  "path": "/san-jose/escazu"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10201",
+  "nombre": "Escazú",
+  "path": "/san-jose/escazu/escazu"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10202",
+  "nombre": "San Antonio",
+  "path": "/san-jose/escazu/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10203",
+  "nombre": "San Rafael",
+  "path": "/san-jose/escazu/san-rafael"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "103",
+  "nombre": "Desamparados",
+  "path": "/san-jose/desamparados"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10301",
+  "nombre": "Desamparados",
+  "path": "/san-jose/desamparados/desamparados"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10302",
+  "nombre": "San Miguel",
+  "path": "/san-jose/desamparados/san-miguel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10303",
+  "nombre": "San Juan de Dios",
+  "path": "/san-jose/desamparados/san-juan-de-dios"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10304",
+  "nombre": "San Rafael Arriba",
+  "path": "/san-jose/desamparados/san-rafael-arriba"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10305",
+  "nombre": "San Antonio",
+  "path": "/san-jose/desamparados/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10306",
+  "nombre": "Frailes",
+  "path": "/san-jose/desamparados/frailes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10307",
+  "nombre": "Patarrá",
+  "path": "/san-jose/desamparados/patarra"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10308",
+  "nombre": "San Cristobal",
+  "path": "/san-jose/desamparados/san-cristobal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10309",
+  "nombre": "Rosario",
+  "path": "/san-jose/desamparados/rosario"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10310",
+  "nombre": "Damas",
+  "path": "/san-jose/desamparados/damas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10311",
+  "nombre": "San Rafael Abajo",
+  "path": "/san-jose/desamparados/san-rafael-abajo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10312",
+  "nombre": "Gravilias",
+  "path": "/san-jose/desamparados/gravilias"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10313",
+  "nombre": "Los Guido",
+  "path": "/san-jose/desamparados/los-guido"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "104",
+  "nombre": "Puriscal",
+  "path": "/san-jose/puriscal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10401",
+  "nombre": "Santiago",
+  "path": "/san-jose/puriscal/santiago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10402",
+  "nombre": "Mercedes Sur",
+  "path": "/san-jose/puriscal/mercedes-sur"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10403",
+  "nombre": "Barbacoas",
+  "path": "/san-jose/puriscal/barbacoas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10404",
+  "nombre": "Grifo Alto",
+  "path": "/san-jose/puriscal/grifo-alto"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10405",
+  "nombre": "San Rafael",
+  "path": "/san-jose/puriscal/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10406",
+  "nombre": "Candelarita",
+  "path": "/san-jose/puriscal/candelarita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10407",
+  "nombre": "Desamparaditos",
+  "path": "/san-jose/puriscal/desamparaditos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10408",
+  "nombre": "San Antonio",
+  "path": "/san-jose/puriscal/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10409",
+  "nombre": "Chires",
+  "path": "/san-jose/puriscal/chires"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "105",
+  "nombre": "Tarrazú",
+  "path": "/san-jose/tarrazu"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10501",
+  "nombre": "San Marcos",
+  "path": "/san-jose/tarrazu/san-marcos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10502",
+  "nombre": "San Lorenzo",
+  "path": "/san-jose/tarrazu/san-lorenzo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10503",
+  "nombre": "San Carlos",
+  "path": "/san-jose/tarrazu/san-carlos"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "106",
+  "nombre": "Aserrí",
+  "path": "/san-jose/aserri"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10601",
+  "nombre": "Aserrí",
+  "path": "/san-jose/aserri/aserri"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10602",
+  "nombre": "Tarbaca",
+  "path": "/san-jose/aserri/tarbaca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10603",
+  "nombre": "Vuelta de Jorco",
+  "path": "/san-jose/aserri/vuelta-de-jorco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10604",
+  "nombre": "San Gabriel",
+  "path": "/san-jose/aserri/san-gabriel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10605",
+  "nombre": "Legua",
+  "path": "/san-jose/aserri/legua"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10606",
+  "nombre": "Monterrey",
+  "path": "/san-jose/aserri/monterrey"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10607",
+  "nombre": "Salitrillos",
+  "path": "/san-jose/aserri/salitrillos"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "107",
+  "nombre": "Mora",
+  "path": "/san-jose/mora"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10701",
+  "nombre": "Colón",
+  "path": "/san-jose/mora/colon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10702",
+  "nombre": "Guayabo",
+  "path": "/san-jose/mora/guayabo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10703",
+  "nombre": "Tabarcia",
+  "path": "/san-jose/mora/tabarcia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10704",
+  "nombre": "Piedras Negras",
+  "path": "/san-jose/mora/piedras-negras"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10705",
+  "nombre": "Picagres",
+  "path": "/san-jose/mora/picagres"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10706",
+  "nombre": "Jaris",
+  "path": "/san-jose/mora/jaris"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10707",
+  "nombre": "Quitirrisí",
+  "path": "/san-jose/mora/quitirrisi"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "108",
+  "nombre": "Goicoechea",
+  "path": "/san-jose/goicoechea"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10801",
+  "nombre": "Guadalupe",
+  "path": "/san-jose/goicoechea/guadalupe"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10802",
+  "nombre": "San Francisco",
+  "path": "/san-jose/goicoechea/san-francisco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10803",
+  "nombre": "Calle Blancos",
+  "path": "/san-jose/goicoechea/calle-blancos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10804",
+  "nombre": "Mata de Plátano",
+  "path": "/san-jose/goicoechea/mata-de-platano"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10805",
+  "nombre": "Ipís",
+  "path": "/san-jose/goicoechea/ipis"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10806",
+  "nombre": "Rancho Redondo",
+  "path": "/san-jose/goicoechea/rancho-redondo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10807",
+  "nombre": "Purral",
+  "path": "/san-jose/goicoechea/purral"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "109",
+  "nombre": "Santa Ana",
+  "path": "/san-jose/santa-ana"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10901",
+  "nombre": "Santa Ana",
+  "path": "/san-jose/santa-ana/santa-ana"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10902",
+  "nombre": "Salitral",
+  "path": "/san-jose/santa-ana/salitral"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10903",
+  "nombre": "Pozos",
+  "path": "/san-jose/santa-ana/pozos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10904",
+  "nombre": "Uruca",
+  "path": "/san-jose/santa-ana/uruca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10905",
+  "nombre": "Piedades",
+  "path": "/san-jose/santa-ana/piedades"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "10906",
+  "nombre": "Brasil",
+  "path": "/san-jose/santa-ana/brasil"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "110",
+  "nombre": "Alajuelita",
+  "path": "/san-jose/alajuelita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11001",
+  "nombre": "Alajuelita",
+  "path": "/san-jose/alajuelita/alajuelita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11002",
+  "nombre": "San Josecito",
+  "path": "/san-jose/alajuelita/san-josecito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11003",
+  "nombre": "San Antonio",
+  "path": "/san-jose/alajuelita/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11004",
+  "nombre": "Concepción",
+  "path": "/san-jose/alajuelita/concepcion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11005",
+  "nombre": "San Felipe",
+  "path": "/san-jose/alajuelita/san-felipe"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "111",
+  "nombre": "Vázquez de Coronado",
+  "path": "/san-jose/vazquez-de-coronado"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11101",
+  "nombre": "San Isidro",
+  "path": "/san-jose/vazquez-de-coronado/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11102",
+  "nombre": "San Rafael",
+  "path": "/san-jose/vazquez-de-coronado/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11103",
+  "nombre": "Dulce Nombre de Jesús",
+  "path": "/san-jose/vazquez-de-coronado/dulce-nombre-de-jesus"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11104",
+  "nombre": "Patalillo",
+  "path": "/san-jose/vazquez-de-coronado/patalillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11105",
+  "nombre": "Cascajal",
+  "path": "/san-jose/vazquez-de-coronado/cascajal"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "112",
+  "nombre": "Acosta",
+  "path": "/san-jose/acosta"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11201",
+  "nombre": "San Ignacio",
+  "path": "/san-jose/acosta/san-ignacio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11202",
+  "nombre": "Guaitil",
+  "path": "/san-jose/acosta/guaitil"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11203",
+  "nombre": "Palmichal",
+  "path": "/san-jose/acosta/palmichal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11204",
+  "nombre": "Cangrejal",
+  "path": "/san-jose/acosta/cangrejal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11205",
+  "nombre": "Sabanillas",
+  "path": "/san-jose/acosta/sabanillas"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "113",
+  "nombre": "Tibás",
+  "path": "/san-jose/tibas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11301",
+  "nombre": "San Juan",
+  "path": "/san-jose/tibas/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11302",
+  "nombre": "Cinco Esquinas",
+  "path": "/san-jose/tibas/cinco-esquinas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11303",
+  "nombre": "Anselmo Llorente",
+  "path": "/san-jose/tibas/anselmo-llorente"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11304",
+  "nombre": "León XIII",
+  "path": "/san-jose/tibas/leon-xiii"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11305",
+  "nombre": "Colima",
+  "path": "/san-jose/tibas/colima"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "114",
+  "nombre": "Moravia",
+  "path": "/san-jose/moravia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11401",
+  "nombre": "San Vicente",
+  "path": "/san-jose/moravia/san-vicente"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11402",
+  "nombre": "San Jerónimo",
+  "path": "/san-jose/moravia/san-jeronimo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11403",
+  "nombre": "La Trinidad",
+  "path": "/san-jose/moravia/la-trinidad"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "115",
+  "nombre": "Montes de Oca",
+  "path": "/san-jose/montes-de-oca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11501",
+  "nombre": "San Pedro",
+  "path": "/san-jose/montes-de-oca/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11502",
+  "nombre": "Sabanilla",
+  "path": "/san-jose/montes-de-oca/sabanilla"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11503",
+  "nombre": "Mercedes",
+  "path": "/san-jose/montes-de-oca/mercedes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11504",
+  "nombre": "San Rafael",
+  "path": "/san-jose/montes-de-oca/san-rafael"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "116",
+  "nombre": "Turrubares",
+  "path": "/san-jose/turrubares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11601",
+  "nombre": "San Pablo",
+  "path": "/san-jose/turrubares/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11602",
+  "nombre": "San Pedro",
+  "path": "/san-jose/turrubares/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11603",
+  "nombre": "San Juan de Mata",
+  "path": "/san-jose/turrubares/san-juan-de-mata"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11604",
+  "nombre": "San Luis",
+  "path": "/san-jose/turrubares/san-luis"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11605",
+  "nombre": "Carara",
+  "path": "/san-jose/turrubares/carara"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "117",
+  "nombre": "Dota",
+  "path": "/san-jose/dota"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11701",
+  "nombre": "Santa María",
+  "path": "/san-jose/dota/santa-maria"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11702",
+  "nombre": "Jardín",
+  "path": "/san-jose/dota/jardin"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11703",
+  "nombre": "Copey",
+  "path": "/san-jose/dota/copey"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "118",
+  "nombre": "Curridabat",
+  "path": "/san-jose/curridabat"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11801",
+  "nombre": "Curridabat",
+  "path": "/san-jose/curridabat/curridabat"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11802",
+  "nombre": "Granadilla",
+  "path": "/san-jose/curridabat/granadilla"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11803",
+  "nombre": "Sánchez",
+  "path": "/san-jose/curridabat/sanchez"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11804",
+  "nombre": "Tirrases",
+  "path": "/san-jose/curridabat/tirrases"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "119",
+  "nombre": "Pérez Zeledón",
+  "path": "/san-jose/perez-zeledon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11901",
+  "nombre": "San Isidro de El General",
+  "path": "/san-jose/perez-zeledon/san-isidro-de-el-general"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11902",
+  "nombre": "El General",
+  "path": "/san-jose/perez-zeledon/el-general"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11903",
+  "nombre": "Daniel Flores",
+  "path": "/san-jose/perez-zeledon/daniel-flores"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11904",
+  "nombre": "Rivas",
+  "path": "/san-jose/perez-zeledon/rivas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11905",
+  "nombre": "San Pedro",
+  "path": "/san-jose/perez-zeledon/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11906",
+  "nombre": "Platanares",
+  "path": "/san-jose/perez-zeledon/platanares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11907",
+  "nombre": "Pejibaye",
+  "path": "/san-jose/perez-zeledon/pejibaye"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11908",
+  "nombre": "Cajón",
+  "path": "/san-jose/perez-zeledon/cajon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11909",
+  "nombre": "Barú",
+  "path": "/san-jose/perez-zeledon/baru"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11910",
+  "nombre": "Río Nuevo",
+  "path": "/san-jose/perez-zeledon/rio-nuevo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11911",
+  "nombre": "Páramo",
+  "path": "/san-jose/perez-zeledon/paramo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "11912",
+  "nombre": "La  Amistad",
+  "path": "/san-jose/perez-zeledon/la-amistad"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "120",
+  "nombre": "León Cortés Castro",
+  "path": "/san-jose/leon-cortes-castro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12001",
+  "nombre": "San Pablo",
+  "path": "/san-jose/leon-cortes-castro/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12002",
+  "nombre": "San Andrés",
+  "path": "/san-jose/leon-cortes-castro/san-andres"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12003",
+  "nombre": "Llano Bonito",
+  "path": "/san-jose/leon-cortes-castro/llano-bonito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12004",
+  "nombre": "San Isidro",
+  "path": "/san-jose/leon-cortes-castro/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12005",
+  "nombre": "Santa Cruz",
+  "path": "/san-jose/leon-cortes-castro/santa-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "12006",
+  "nombre": "San Antonio",
+  "path": "/san-jose/leon-cortes-castro/san-antonio"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "2",
+  "nombre": "Alajuela",
+  "path": "/alajuela"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "201",
+  "nombre": "Alajuela",
+  "path": "/alajuela/alajuela"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20101",
+  "nombre": "Alajuela",
+  "path": "/alajuela/alajuela/alajuela"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20102",
+  "nombre": "San José",
+  "path": "/alajuela/alajuela/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20103",
+  "nombre": "Carrizal",
+  "path": "/alajuela/alajuela/carrizal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20104",
+  "nombre": "San Antonio",
+  "path": "/alajuela/alajuela/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20105",
+  "nombre": "Guácima",
+  "path": "/alajuela/alajuela/guacima"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20106",
+  "nombre": "San Isidro",
+  "path": "/alajuela/alajuela/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20107",
+  "nombre": "Sabanilla",
+  "path": "/alajuela/alajuela/sabanilla"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20108",
+  "nombre": "San Rafael",
+  "path": "/alajuela/alajuela/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20109",
+  "nombre": "Río Segundo",
+  "path": "/alajuela/alajuela/rio-segundo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20110",
+  "nombre": "Desamparados",
+  "path": "/alajuela/alajuela/desamparados"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20111",
+  "nombre": "Turrúcares",
+  "path": "/alajuela/alajuela/turrucares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20112",
+  "nombre": "Tambor",
+  "path": "/alajuela/alajuela/tambor"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20113",
+  "nombre": "Garita",
+  "path": "/alajuela/alajuela/garita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20114",
+  "nombre": "Sarapiquí",
+  "path": "/alajuela/alajuela/sarapiqui"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "202",
+  "nombre": "San Ramón",
+  "path": "/alajuela/san-ramon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20201",
+  "nombre": "San Ramón",
+  "path": "/alajuela/san-ramon/san-ramon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20202",
+  "nombre": "Santiago",
+  "path": "/alajuela/san-ramon/santiago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20203",
+  "nombre": "San Juan",
+  "path": "/alajuela/san-ramon/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20204",
+  "nombre": "Piedades Norte",
+  "path": "/alajuela/san-ramon/piedades-norte"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20205",
+  "nombre": "Piedades Sur",
+  "path": "/alajuela/san-ramon/piedades-sur"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20206",
+  "nombre": "San Rafael",
+  "path": "/alajuela/san-ramon/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20207",
+  "nombre": "San Isidro",
+  "path": "/alajuela/san-ramon/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20208",
+  "nombre": "Ángeles",
+  "path": "/alajuela/san-ramon/angeles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20209",
+  "nombre": "Alfaro",
+  "path": "/alajuela/san-ramon/alfaro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20210",
+  "nombre": "Volio",
+  "path": "/alajuela/san-ramon/volio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20211",
+  "nombre": "Concepción",
+  "path": "/alajuela/san-ramon/concepcion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20212",
+  "nombre": "Zapotal",
+  "path": "/alajuela/san-ramon/zapotal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20213",
+  "nombre": "Peñas Blancas",
+  "path": "/alajuela/san-ramon/penas-blancas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20214",
+  "nombre": "San Lorenzo",
+  "path": "/alajuela/san-ramon/san-lorenzo"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "203",
+  "nombre": "Grecia",
+  "path": "/alajuela/grecia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20301",
+  "nombre": "Grecia",
+  "path": "/alajuela/grecia/grecia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20302",
+  "nombre": "San Isidro",
+  "path": "/alajuela/grecia/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20303",
+  "nombre": "San José",
+  "path": "/alajuela/grecia/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20304",
+  "nombre": "San Roque",
+  "path": "/alajuela/grecia/san-roque"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20305",
+  "nombre": "Tacares",
+  "path": "/alajuela/grecia/tacares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20307",
+  "nombre": "Puente de Piedra",
+  "path": "/alajuela/grecia/puente-de-piedra"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20308",
+  "nombre": "Bolivar",
+  "path": "/alajuela/grecia/bolivar"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "204",
+  "nombre": "San Mateo",
+  "path": "/alajuela/san-mateo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20401",
+  "nombre": "San Mateo",
+  "path": "/alajuela/san-mateo/san-mateo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20402",
+  "nombre": "Desmonte",
+  "path": "/alajuela/san-mateo/desmonte"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20403",
+  "nombre": "Jesús María",
+  "path": "/alajuela/san-mateo/jesus-maria"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20404",
+  "nombre": "Labrador",
+  "path": "/alajuela/san-mateo/labrador"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "205",
+  "nombre": "Atenas",
+  "path": "/alajuela/atenas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20501",
+  "nombre": "Atenas",
+  "path": "/alajuela/atenas/atenas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20502",
+  "nombre": "Jesús",
+  "path": "/alajuela/atenas/jesus"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20503",
+  "nombre": "Mercedes",
+  "path": "/alajuela/atenas/mercedes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20504",
+  "nombre": "San Isidro",
+  "path": "/alajuela/atenas/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20505",
+  "nombre": "Concepción",
+  "path": "/alajuela/atenas/concepcion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20506",
+  "nombre": "San José",
+  "path": "/alajuela/atenas/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20507",
+  "nombre": "Santa Eulalia",
+  "path": "/alajuela/atenas/santa-eulalia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20508",
+  "nombre": "Escobal",
+  "path": "/alajuela/atenas/escobal"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "206",
+  "nombre": "Naranjo",
+  "path": "/alajuela/naranjo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20601",
+  "nombre": "Naranjo",
+  "path": "/alajuela/naranjo/naranjo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20602",
+  "nombre": "San Miguel",
+  "path": "/alajuela/naranjo/san-miguel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20603",
+  "nombre": "San José",
+  "path": "/alajuela/naranjo/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20604",
+  "nombre": "Cirrí Sur",
+  "path": "/alajuela/naranjo/cirri-sur"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20605",
+  "nombre": "San Jerónimo",
+  "path": "/alajuela/naranjo/san-jeronimo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20606",
+  "nombre": "San Juan",
+  "path": "/alajuela/naranjo/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20607",
+  "nombre": "El Rosario",
+  "path": "/alajuela/naranjo/el-rosario"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20608",
+  "nombre": "Palmitos",
+  "path": "/alajuela/naranjo/palmitos"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "207",
+  "nombre": "Palmares",
+  "path": "/alajuela/palmares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20701",
+  "nombre": "Palmares",
+  "path": "/alajuela/palmares/palmares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20702",
+  "nombre": "Zaragoza",
+  "path": "/alajuela/palmares/zaragoza"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20703",
+  "nombre": "Buenos Aires",
+  "path": "/alajuela/palmares/buenos-aires"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20704",
+  "nombre": "Santiago",
+  "path": "/alajuela/palmares/santiago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20705",
+  "nombre": "Candelaria",
+  "path": "/alajuela/palmares/candelaria"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20706",
+  "nombre": "Esquipulas",
+  "path": "/alajuela/palmares/esquipulas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20707",
+  "nombre": "La Granja",
+  "path": "/alajuela/palmares/la-granja"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "208",
+  "nombre": "Poás",
+  "path": "/alajuela/poas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20801",
+  "nombre": "San Pedro",
+  "path": "/alajuela/poas/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20802",
+  "nombre": "San Juan",
+  "path": "/alajuela/poas/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20803",
+  "nombre": "San Rafael",
+  "path": "/alajuela/poas/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20804",
+  "nombre": "Carrillos",
+  "path": "/alajuela/poas/carrillos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20805",
+  "nombre": "Sabana Redonda",
+  "path": "/alajuela/poas/sabana-redonda"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "209",
+  "nombre": "Orotina",
+  "path": "/alajuela/orotina"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20901",
+  "nombre": "Orotina",
+  "path": "/alajuela/orotina/orotina"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20902",
+  "nombre": "El Mastate",
+  "path": "/alajuela/orotina/el-mastate"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20903",
+  "nombre": "Hacienda Vieja",
+  "path": "/alajuela/orotina/hacienda-vieja"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20904",
+  "nombre": "Coyolar",
+  "path": "/alajuela/orotina/coyolar"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "20905",
+  "nombre": "La Ceiba",
+  "path": "/alajuela/orotina/la-ceiba"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "210",
+  "nombre": "San Carlos",
+  "path": "/alajuela/san-carlos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21001",
+  "nombre": "Quesada",
+  "path": "/alajuela/san-carlos/quesada"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21002",
+  "nombre": "Florencia",
+  "path": "/alajuela/san-carlos/florencia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21003",
+  "nombre": "Buenavista",
+  "path": "/alajuela/san-carlos/buenavista"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21004",
+  "nombre": "Aguas Zarcas",
+  "path": "/alajuela/san-carlos/aguas-zarcas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21005",
+  "nombre": "Venecia",
+  "path": "/alajuela/san-carlos/venecia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21006",
+  "nombre": "Pital",
+  "path": "/alajuela/san-carlos/pital"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21007",
+  "nombre": "La Fortuna",
+  "path": "/alajuela/san-carlos/la-fortuna"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21008",
+  "nombre": "La Tigra",
+  "path": "/alajuela/san-carlos/la-tigra"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21009",
+  "nombre": "La Palmera",
+  "path": "/alajuela/san-carlos/la-palmera"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21010",
+  "nombre": "Venado",
+  "path": "/alajuela/san-carlos/venado"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21011",
+  "nombre": "Cutris",
+  "path": "/alajuela/san-carlos/cutris"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21012",
+  "nombre": "Monterrey",
+  "path": "/alajuela/san-carlos/monterrey"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21013",
+  "nombre": "Pocosol",
+  "path": "/alajuela/san-carlos/pocosol"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "211",
+  "nombre": "Zarcero",
+  "path": "/alajuela/zarcero"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21101",
+  "nombre": "Zarcero",
+  "path": "/alajuela/zarcero/zarcero"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21102",
+  "nombre": "Laguna",
+  "path": "/alajuela/zarcero/laguna"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21103",
+  "nombre": "Tapesco",
+  "path": "/alajuela/zarcero/tapesco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21104",
+  "nombre": "Guadalupe",
+  "path": "/alajuela/zarcero/guadalupe"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21105",
+  "nombre": "Palmira",
+  "path": "/alajuela/zarcero/palmira"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21106",
+  "nombre": "Zapote",
+  "path": "/alajuela/zarcero/zapote"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21107",
+  "nombre": "Brisas",
+  "path": "/alajuela/zarcero/brisas"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "212",
+  "nombre": "Sarchí",
+  "path": "/alajuela/sarchi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21201",
+  "nombre": "Sarchí Norte",
+  "path": "/alajuela/sarchi/sarchi-norte"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21202",
+  "nombre": "Sarchí Sur",
+  "path": "/alajuela/sarchi/sarchi-sur"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21203",
+  "nombre": "Toro Amarillo",
+  "path": "/alajuela/sarchi/toro-amarillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21204",
+  "nombre": "San Pedro",
+  "path": "/alajuela/sarchi/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21205",
+  "nombre": "Rodríguez",
+  "path": "/alajuela/sarchi/rodriguez"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "213",
+  "nombre": "Upala",
+  "path": "/alajuela/upala"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21301",
+  "nombre": "Upala",
+  "path": "/alajuela/upala/upala"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21302",
+  "nombre": "Aguas Claras",
+  "path": "/alajuela/upala/aguas-claras"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21303",
+  "nombre": "San José O Pizote",
+  "path": "/alajuela/upala/san-jose-o-pizote"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21304",
+  "nombre": "Bijagua",
+  "path": "/alajuela/upala/bijagua"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21305",
+  "nombre": "Delicias",
+  "path": "/alajuela/upala/delicias"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21306",
+  "nombre": "Dos Ríos",
+  "path": "/alajuela/upala/dos-rios"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21307",
+  "nombre": "Yolillal",
+  "path": "/alajuela/upala/yolillal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21308",
+  "nombre": "Canalete",
+  "path": "/alajuela/upala/canalete"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "214",
+  "nombre": "Los Chiles",
+  "path": "/alajuela/los-chiles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21401",
+  "nombre": "Los Chiles",
+  "path": "/alajuela/los-chiles/los-chiles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21402",
+  "nombre": "Caño Negro",
+  "path": "/alajuela/los-chiles/cano-negro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21403",
+  "nombre": "El Amparo",
+  "path": "/alajuela/los-chiles/el-amparo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21404",
+  "nombre": "San Jorge",
+  "path": "/alajuela/los-chiles/san-jorge"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "215",
+  "nombre": "Guatuso",
+  "path": "/alajuela/guatuso"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21501",
+  "nombre": "San Rafael",
+  "path": "/alajuela/guatuso/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21502",
+  "nombre": "Buenavista",
+  "path": "/alajuela/guatuso/buenavista"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21503",
+  "nombre": "Cote",
+  "path": "/alajuela/guatuso/cote"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21504",
+  "nombre": "Katira",
+  "path": "/alajuela/guatuso/katira"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "216",
+  "nombre": "Río Cuarto",
+  "path": "/alajuela/rio-cuarto"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21601",
+  "nombre": "Río Cuarto",
+  "path": "/alajuela/rio-cuarto/rio-cuarto"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21602",
+  "nombre": "Santa Rita",
+  "path": "/alajuela/rio-cuarto/santa-rita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "21603",
+  "nombre": "Santa Isabel",
+  "path": "/alajuela/rio-cuarto/santa-isabel"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "3",
+  "nombre": "Cartago",
+  "path": "/cartago"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "301",
+  "nombre": "Cartago",
+  "path": "/cartago/cartago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30101",
+  "nombre": "Oriental",
+  "path": "/cartago/cartago/oriental"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30102",
+  "nombre": "Occidental",
+  "path": "/cartago/cartago/occidental"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30103",
+  "nombre": "Carmen",
+  "path": "/cartago/cartago/carmen"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30104",
+  "nombre": "San Nicolás",
+  "path": "/cartago/cartago/san-nicolas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30105",
+  "nombre": "Aguacaliente o San Francisco",
+  "path": "/cartago/cartago/aguacaliente-o-san-francisco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30106",
+  "nombre": "Guadalupe o Arenilla",
+  "path": "/cartago/cartago/guadalupe-o-arenilla"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30107",
+  "nombre": "Corralillo",
+  "path": "/cartago/cartago/corralillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30108",
+  "nombre": "Tierra Blanca",
+  "path": "/cartago/cartago/tierra-blanca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30109",
+  "nombre": "Dulce Nombre",
+  "path": "/cartago/cartago/dulce-nombre"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30110",
+  "nombre": "Llano Grande",
+  "path": "/cartago/cartago/llano-grande"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30111",
+  "nombre": "Quebradilla",
+  "path": "/cartago/cartago/quebradilla"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "302",
+  "nombre": "Paraíso",
+  "path": "/cartago/paraiso"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30201",
+  "nombre": "Paraíso",
+  "path": "/cartago/paraiso/paraiso"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30202",
+  "nombre": "Santiago",
+  "path": "/cartago/paraiso/santiago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30203",
+  "nombre": "Orosi",
+  "path": "/cartago/paraiso/orosi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30204",
+  "nombre": "Cachí",
+  "path": "/cartago/paraiso/cachi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30205",
+  "nombre": "Llanos de Santa Lucía",
+  "path": "/cartago/paraiso/llanos-de-santa-lucia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30206",
+  "nombre": "Birrisito",
+  "path": "/cartago/paraiso/birrisito"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "303",
+  "nombre": "La Unión",
+  "path": "/cartago/la-union"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30301",
+  "nombre": "Tres Ríos",
+  "path": "/cartago/la-union/tres-rios"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30302",
+  "nombre": "San Diego",
+  "path": "/cartago/la-union/san-diego"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30303",
+  "nombre": "San Juan",
+  "path": "/cartago/la-union/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30304",
+  "nombre": "San Rafael",
+  "path": "/cartago/la-union/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30305",
+  "nombre": "Concepción",
+  "path": "/cartago/la-union/concepcion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30306",
+  "nombre": "Dulce Nombre",
+  "path": "/cartago/la-union/dulce-nombre"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30307",
+  "nombre": "San Ramón",
+  "path": "/cartago/la-union/san-ramon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30308",
+  "nombre": "Río Azul",
+  "path": "/cartago/la-union/rio-azul"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "304",
+  "nombre": "Jiménez",
+  "path": "/cartago/jimenez"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30401",
+  "nombre": "Juan Viñas",
+  "path": "/cartago/jimenez/juan-vinas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30402",
+  "nombre": "Tucurrique",
+  "path": "/cartago/jimenez/tucurrique"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30403",
+  "nombre": "Pejivalle",
+  "path": "/cartago/jimenez/pejivalle"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30404",
+  "nombre": "La Victoria",
+  "path": "/cartago/jimenez/la-victoria"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "305",
+  "nombre": "Turrialba",
+  "path": "/cartago/turrialba"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30501",
+  "nombre": "Turrialba",
+  "path": "/cartago/turrialba/turrialba"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30502",
+  "nombre": "La Suiza",
+  "path": "/cartago/turrialba/la-suiza"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30503",
+  "nombre": "Peralta",
+  "path": "/cartago/turrialba/peralta"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30504",
+  "nombre": "Santa Cruz",
+  "path": "/cartago/turrialba/santa-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30505",
+  "nombre": "Santa Teresita",
+  "path": "/cartago/turrialba/santa-teresita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30506",
+  "nombre": "Pavones",
+  "path": "/cartago/turrialba/pavones"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30507",
+  "nombre": "Tuis",
+  "path": "/cartago/turrialba/tuis"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30508",
+  "nombre": "Tayutic",
+  "path": "/cartago/turrialba/tayutic"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30509",
+  "nombre": "Santa Rosa",
+  "path": "/cartago/turrialba/santa-rosa"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30510",
+  "nombre": "Tres Equis",
+  "path": "/cartago/turrialba/tres-equis"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30511",
+  "nombre": "La Isabel",
+  "path": "/cartago/turrialba/la-isabel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30512",
+  "nombre": "Chirripó",
+  "path": "/cartago/turrialba/chirripo"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "306",
+  "nombre": "Alvarado",
+  "path": "/cartago/alvarado"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30601",
+  "nombre": "Pacayas",
+  "path": "/cartago/alvarado/pacayas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30602",
+  "nombre": "Cervantes",
+  "path": "/cartago/alvarado/cervantes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30603",
+  "nombre": "Capellades",
+  "path": "/cartago/alvarado/capellades"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "307",
+  "nombre": "Oreamuno",
+  "path": "/cartago/oreamuno"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30701",
+  "nombre": "San Rafael",
+  "path": "/cartago/oreamuno/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30702",
+  "nombre": "Cot",
+  "path": "/cartago/oreamuno/cot"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30703",
+  "nombre": "Potrero Cerrado",
+  "path": "/cartago/oreamuno/potrero-cerrado"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30704",
+  "nombre": "Cipreses",
+  "path": "/cartago/oreamuno/cipreses"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30705",
+  "nombre": "Santa Rosa",
+  "path": "/cartago/oreamuno/santa-rosa"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "308",
+  "nombre": "El Guarco",
+  "path": "/cartago/el-guarco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30801",
+  "nombre": "El Tejar",
+  "path": "/cartago/el-guarco/el-tejar"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30802",
+  "nombre": "San Isidro",
+  "path": "/cartago/el-guarco/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30803",
+  "nombre": "Tobosi",
+  "path": "/cartago/el-guarco/tobosi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "30804",
+  "nombre": "Patio de Agua",
+  "path": "/cartago/el-guarco/patio-de-agua"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "4",
+  "nombre": "Heredia",
+  "path": "/heredia"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "401",
+  "nombre": "Heredia",
+  "path": "/heredia/heredia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40101",
+  "nombre": "Heredia",
+  "path": "/heredia/heredia/heredia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40102",
+  "nombre": "Mercedes",
+  "path": "/heredia/heredia/mercedes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40103",
+  "nombre": "San Francisco",
+  "path": "/heredia/heredia/san-francisco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40104",
+  "nombre": "Ulloa",
+  "path": "/heredia/heredia/ulloa"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40105",
+  "nombre": "Vara Blanca",
+  "path": "/heredia/heredia/vara-blanca"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "402",
+  "nombre": "Barva",
+  "path": "/heredia/barva"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40201",
+  "nombre": "Barva",
+  "path": "/heredia/barva/barva"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40202",
+  "nombre": "San Pedro",
+  "path": "/heredia/barva/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40203",
+  "nombre": "San Pablo",
+  "path": "/heredia/barva/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40204",
+  "nombre": "San Roque",
+  "path": "/heredia/barva/san-roque"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40205",
+  "nombre": "Santa Lucía",
+  "path": "/heredia/barva/santa-lucia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40206",
+  "nombre": "San José de la Montaña",
+  "path": "/heredia/barva/san-jose-de-la-montana"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40207",
+  "nombre": "Puente Salas",
+  "path": "/heredia/barva/puente-salas"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "403",
+  "nombre": "Santo Domingo",
+  "path": "/heredia/santo-domingo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40301",
+  "nombre": "Santo Domingo",
+  "path": "/heredia/santo-domingo/santo-domingo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40302",
+  "nombre": "San Vicente",
+  "path": "/heredia/santo-domingo/san-vicente"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40303",
+  "nombre": "San Miguel",
+  "path": "/heredia/santo-domingo/san-miguel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40304",
+  "nombre": "Paracito",
+  "path": "/heredia/santo-domingo/paracito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40305",
+  "nombre": "Santo Tomás",
+  "path": "/heredia/santo-domingo/santo-tomas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40306",
+  "nombre": "Santa Rosa",
+  "path": "/heredia/santo-domingo/santa-rosa"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40307",
+  "nombre": "Tures",
+  "path": "/heredia/santo-domingo/tures"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40308",
+  "nombre": "Pará",
+  "path": "/heredia/santo-domingo/para"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "404",
+  "nombre": "Santa Bárbara",
+  "path": "/heredia/santa-barbara"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40401",
+  "nombre": "Santa Bárbara",
+  "path": "/heredia/santa-barbara/santa-barbara"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40402",
+  "nombre": "San Pedro",
+  "path": "/heredia/santa-barbara/san-pedro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40403",
+  "nombre": "San Juan",
+  "path": "/heredia/santa-barbara/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40404",
+  "nombre": "Jesús",
+  "path": "/heredia/santa-barbara/jesus"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40405",
+  "nombre": "Santo Domingo",
+  "path": "/heredia/santa-barbara/santo-domingo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40406",
+  "nombre": "Purabá",
+  "path": "/heredia/santa-barbara/puraba"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "405",
+  "nombre": "San Rafael",
+  "path": "/heredia/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40501",
+  "nombre": "San Rafael",
+  "path": "/heredia/san-rafael/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40502",
+  "nombre": "San Josecito",
+  "path": "/heredia/san-rafael/san-josecito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40503",
+  "nombre": "Santiago",
+  "path": "/heredia/san-rafael/santiago"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40504",
+  "nombre": "Ángeles",
+  "path": "/heredia/san-rafael/angeles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40505",
+  "nombre": "Concepción",
+  "path": "/heredia/san-rafael/concepcion"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "406",
+  "nombre": "San Isidro",
+  "path": "/heredia/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40601",
+  "nombre": "San Isidro",
+  "path": "/heredia/san-isidro/san-isidro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40602",
+  "nombre": "San José",
+  "path": "/heredia/san-isidro/san-jose"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40603",
+  "nombre": "Concepción",
+  "path": "/heredia/san-isidro/concepcion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40604",
+  "nombre": "San Francisco",
+  "path": "/heredia/san-isidro/san-francisco"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "407",
+  "nombre": "Belén",
+  "path": "/heredia/belen"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40701",
+  "nombre": "San Antonio",
+  "path": "/heredia/belen/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40702",
+  "nombre": "La Ribera",
+  "path": "/heredia/belen/la-ribera"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40703",
+  "nombre": "La Asunción",
+  "path": "/heredia/belen/la-asuncion"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "408",
+  "nombre": "Flores",
+  "path": "/heredia/flores"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40801",
+  "nombre": "San Joaquín",
+  "path": "/heredia/flores/san-joaquin"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40802",
+  "nombre": "Barrantes",
+  "path": "/heredia/flores/barrantes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40803",
+  "nombre": "Llorente",
+  "path": "/heredia/flores/llorente"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "409",
+  "nombre": "San Pablo",
+  "path": "/heredia/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40901",
+  "nombre": "San Pablo",
+  "path": "/heredia/san-pablo/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "40902",
+  "nombre": "Rincón de Sabanilla",
+  "path": "/heredia/san-pablo/rincon-de-sabanilla"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "410",
+  "nombre": "Sarapiquí",
+  "path": "/heredia/sarapiqui"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "41001",
+  "nombre": "Puerto Viejo",
+  "path": "/heredia/sarapiqui/puerto-viejo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "41002",
+  "nombre": "La Virgen",
+  "path": "/heredia/sarapiqui/la-virgen"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "41003",
+  "nombre": "Las Horquetas",
+  "path": "/heredia/sarapiqui/las-horquetas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "41004",
+  "nombre": "Llanuras del Gaspar",
+  "path": "/heredia/sarapiqui/llanuras-del-gaspar"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "41005",
+  "nombre": "Cureña",
+  "path": "/heredia/sarapiqui/curena"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "5",
+  "nombre": "Guanacaste",
+  "path": "/guanacaste"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "501",
+  "nombre": "Liberia",
+  "path": "/guanacaste/liberia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50101",
+  "nombre": "Liberia",
+  "path": "/guanacaste/liberia/liberia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50102",
+  "nombre": "Cañas Dulces",
+  "path": "/guanacaste/liberia/canas-dulces"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50103",
+  "nombre": "Mayorga",
+  "path": "/guanacaste/liberia/mayorga"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50104",
+  "nombre": "Nacascolo",
+  "path": "/guanacaste/liberia/nacascolo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50105",
+  "nombre": "Curubandé",
+  "path": "/guanacaste/liberia/curubande"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "502",
+  "nombre": "Nicoya",
+  "path": "/guanacaste/nicoya"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50201",
+  "nombre": "Nicoya",
+  "path": "/guanacaste/nicoya/nicoya"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50202",
+  "nombre": "Mansión",
+  "path": "/guanacaste/nicoya/mansion"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50203",
+  "nombre": "San Antonio",
+  "path": "/guanacaste/nicoya/san-antonio"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50204",
+  "nombre": "Quebrada Honda",
+  "path": "/guanacaste/nicoya/quebrada-honda"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50205",
+  "nombre": "Sámara",
+  "path": "/guanacaste/nicoya/samara"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50206",
+  "nombre": "Nosara",
+  "path": "/guanacaste/nicoya/nosara"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50207",
+  "nombre": "Belén de Nosarita",
+  "path": "/guanacaste/nicoya/belen-de-nosarita"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "503",
+  "nombre": "Santa Cruz",
+  "path": "/guanacaste/santa-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50301",
+  "nombre": "Santa Cruz",
+  "path": "/guanacaste/santa-cruz/santa-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50302",
+  "nombre": "Bolsón",
+  "path": "/guanacaste/santa-cruz/bolson"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50303",
+  "nombre": "Veintisiete de Abril",
+  "path": "/guanacaste/santa-cruz/veintisiete-de-abril"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50304",
+  "nombre": "Tempate",
+  "path": "/guanacaste/santa-cruz/tempate"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50305",
+  "nombre": "Cartagena",
+  "path": "/guanacaste/santa-cruz/cartagena"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50306",
+  "nombre": "Cuajiniquil",
+  "path": "/guanacaste/santa-cruz/cuajiniquil"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50307",
+  "nombre": "Diriá",
+  "path": "/guanacaste/santa-cruz/diria"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50308",
+  "nombre": "Cabo Velas",
+  "path": "/guanacaste/santa-cruz/cabo-velas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50309",
+  "nombre": "Tamarindo",
+  "path": "/guanacaste/santa-cruz/tamarindo"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "504",
+  "nombre": "Bagaces",
+  "path": "/guanacaste/bagaces"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50401",
+  "nombre": "Bagaces",
+  "path": "/guanacaste/bagaces/bagaces"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50402",
+  "nombre": "La Fortuna",
+  "path": "/guanacaste/bagaces/la-fortuna"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50403",
+  "nombre": "Mogote",
+  "path": "/guanacaste/bagaces/mogote"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50404",
+  "nombre": "Río Naranjo",
+  "path": "/guanacaste/bagaces/rio-naranjo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50405",
+  "nombre": "Pijije",
+  "path": "/guanacaste/bagaces/pijije"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "505",
+  "nombre": "Carrillo",
+  "path": "/guanacaste/carrillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50501",
+  "nombre": "Filadelfia",
+  "path": "/guanacaste/carrillo/filadelfia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50502",
+  "nombre": "Palmira",
+  "path": "/guanacaste/carrillo/palmira"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50503",
+  "nombre": "Sardinal",
+  "path": "/guanacaste/carrillo/sardinal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50504",
+  "nombre": "Belén",
+  "path": "/guanacaste/carrillo/belen"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "506",
+  "nombre": "Cañas",
+  "path": "/guanacaste/canas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50601",
+  "nombre": "Cañas",
+  "path": "/guanacaste/canas/canas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50602",
+  "nombre": "Palmira",
+  "path": "/guanacaste/canas/palmira"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50603",
+  "nombre": "San Miguel",
+  "path": "/guanacaste/canas/san-miguel"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50604",
+  "nombre": "Bebedero",
+  "path": "/guanacaste/canas/bebedero"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50605",
+  "nombre": "Porozal",
+  "path": "/guanacaste/canas/porozal"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "507",
+  "nombre": "Abangares",
+  "path": "/guanacaste/abangares"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50701",
+  "nombre": "Las Juntas",
+  "path": "/guanacaste/abangares/las-juntas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50702",
+  "nombre": "Sierra",
+  "path": "/guanacaste/abangares/sierra"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50703",
+  "nombre": "San Juan",
+  "path": "/guanacaste/abangares/san-juan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50704",
+  "nombre": "Colorado",
+  "path": "/guanacaste/abangares/colorado"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "508",
+  "nombre": "Tilarán",
+  "path": "/guanacaste/tilaran"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50801",
+  "nombre": "Tilarán",
+  "path": "/guanacaste/tilaran/tilaran"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50802",
+  "nombre": "Quebrada Grande",
+  "path": "/guanacaste/tilaran/quebrada-grande"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50803",
+  "nombre": "Tronadora",
+  "path": "/guanacaste/tilaran/tronadora"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50804",
+  "nombre": "Santa Rosa",
+  "path": "/guanacaste/tilaran/santa-rosa"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50805",
+  "nombre": "Líbano",
+  "path": "/guanacaste/tilaran/libano"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50806",
+  "nombre": "Tierras Morenas",
+  "path": "/guanacaste/tilaran/tierras-morenas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50807",
+  "nombre": "Arenal",
+  "path": "/guanacaste/tilaran/arenal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50808",
+  "nombre": "Cabeceras",
+  "path": "/guanacaste/tilaran/cabeceras"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "509",
+  "nombre": "Nandayure",
+  "path": "/guanacaste/nandayure"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50901",
+  "nombre": "Carmona",
+  "path": "/guanacaste/nandayure/carmona"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50902",
+  "nombre": "Santa Rita",
+  "path": "/guanacaste/nandayure/santa-rita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50903",
+  "nombre": "Zapotal",
+  "path": "/guanacaste/nandayure/zapotal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50904",
+  "nombre": "San Pablo",
+  "path": "/guanacaste/nandayure/san-pablo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50905",
+  "nombre": "Porvenir",
+  "path": "/guanacaste/nandayure/porvenir"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "50906",
+  "nombre": "Bejuco",
+  "path": "/guanacaste/nandayure/bejuco"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "510",
+  "nombre": "La Cruz",
+  "path": "/guanacaste/la-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51001",
+  "nombre": "La Cruz",
+  "path": "/guanacaste/la-cruz/la-cruz"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51002",
+  "nombre": "Santa Cecilia",
+  "path": "/guanacaste/la-cruz/santa-cecilia"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51003",
+  "nombre": "La Garita",
+  "path": "/guanacaste/la-cruz/la-garita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51004",
+  "nombre": "Santa Elena",
+  "path": "/guanacaste/la-cruz/santa-elena"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "511",
+  "nombre": "Hojancha",
+  "path": "/guanacaste/hojancha"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51101",
+  "nombre": "Hojancha",
+  "path": "/guanacaste/hojancha/hojancha"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51102",
+  "nombre": "Monte Romo",
+  "path": "/guanacaste/hojancha/monte-romo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51103",
+  "nombre": "Puerto Carrillo",
+  "path": "/guanacaste/hojancha/puerto-carrillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51104",
+  "nombre": "Huacas",
+  "path": "/guanacaste/hojancha/huacas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "51105",
+  "nombre": "Matambú",
+  "path": "/guanacaste/hojancha/matambu"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "6",
+  "nombre": "Puntarenas",
+  "path": "/puntarenas"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "601",
+  "nombre": "Puntarenas",
+  "path": "/puntarenas/puntarenas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60101",
+  "nombre": "Puntarenas",
+  "path": "/puntarenas/puntarenas/puntarenas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60102",
+  "nombre": "Pitahaya",
+  "path": "/puntarenas/puntarenas/pitahaya"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60103",
+  "nombre": "Chomes",
+  "path": "/puntarenas/puntarenas/chomes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60104",
+  "nombre": "Lepanto",
+  "path": "/puntarenas/puntarenas/lepanto"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60105",
+  "nombre": "Paquera",
+  "path": "/puntarenas/puntarenas/paquera"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60106",
+  "nombre": "Manzanillo",
+  "path": "/puntarenas/puntarenas/manzanillo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60107",
+  "nombre": "Guacimal",
+  "path": "/puntarenas/puntarenas/guacimal"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60108",
+  "nombre": "Barranca",
+  "path": "/puntarenas/puntarenas/barranca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60110",
+  "nombre": "Isla del Coco",
+  "path": "/puntarenas/puntarenas/isla-del-coco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60111",
+  "nombre": "Cóbano",
+  "path": "/puntarenas/puntarenas/cobano"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60112",
+  "nombre": "Chacarita",
+  "path": "/puntarenas/puntarenas/chacarita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60113",
+  "nombre": "Chira",
+  "path": "/puntarenas/puntarenas/chira"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60114",
+  "nombre": "Acapulco",
+  "path": "/puntarenas/puntarenas/acapulco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60115",
+  "nombre": "El Roble",
+  "path": "/puntarenas/puntarenas/el-roble"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60116",
+  "nombre": "Arancibia",
+  "path": "/puntarenas/puntarenas/arancibia"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "602",
+  "nombre": "Esparza",
+  "path": "/puntarenas/esparza"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60201",
+  "nombre": "Espíritu Santo",
+  "path": "/puntarenas/esparza/espiritu-santo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60202",
+  "nombre": "San Juan Grande",
+  "path": "/puntarenas/esparza/san-juan-grande"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60203",
+  "nombre": "Macacona",
+  "path": "/puntarenas/esparza/macacona"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60204",
+  "nombre": "San Rafael",
+  "path": "/puntarenas/esparza/san-rafael"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60205",
+  "nombre": "San Jerónimo",
+  "path": "/puntarenas/esparza/san-jeronimo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60206",
+  "nombre": "Caldera",
+  "path": "/puntarenas/esparza/caldera"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "603",
+  "nombre": "Buenos Aires",
+  "path": "/puntarenas/buenos-aires"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60301",
+  "nombre": "Buenos Aires",
+  "path": "/puntarenas/buenos-aires/buenos-aires"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60302",
+  "nombre": "Volcán",
+  "path": "/puntarenas/buenos-aires/volcan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60303",
+  "nombre": "Potrero Grande",
+  "path": "/puntarenas/buenos-aires/potrero-grande"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60304",
+  "nombre": "Boruca",
+  "path": "/puntarenas/buenos-aires/boruca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60305",
+  "nombre": "Pilas",
+  "path": "/puntarenas/buenos-aires/pilas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60306",
+  "nombre": "Colinas",
+  "path": "/puntarenas/buenos-aires/colinas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60307",
+  "nombre": "Chánguena",
+  "path": "/puntarenas/buenos-aires/changuena"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60308",
+  "nombre": "Biolley",
+  "path": "/puntarenas/buenos-aires/biolley"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60309",
+  "nombre": "Brunka",
+  "path": "/puntarenas/buenos-aires/brunka"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60310",
+  "nombre": "Cabagra",
+  "path": "/puntarenas/buenos-aires/cabagra"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "604",
+  "nombre": "Montes de Oro",
+  "path": "/puntarenas/montes-de-oro"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60401",
+  "nombre": "Miramar",
+  "path": "/puntarenas/montes-de-oro/miramar"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60402",
+  "nombre": "La Unión",
+  "path": "/puntarenas/montes-de-oro/la-union"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60403",
+  "nombre": "San Isidro",
+  "path": "/puntarenas/montes-de-oro/san-isidro"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "605",
+  "nombre": "Osa",
+  "path": "/puntarenas/osa"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60501",
+  "nombre": "Puerto Cortés",
+  "path": "/puntarenas/osa/puerto-cortes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60502",
+  "nombre": "Palmar",
+  "path": "/puntarenas/osa/palmar"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60503",
+  "nombre": "Sierpe",
+  "path": "/puntarenas/osa/sierpe"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60504",
+  "nombre": "Bahía Ballena",
+  "path": "/puntarenas/osa/bahia-ballena"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60505",
+  "nombre": "Piedras Blancas",
+  "path": "/puntarenas/osa/piedras-blancas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60506",
+  "nombre": "Bahía Drake",
+  "path": "/puntarenas/osa/bahia-drake"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "606",
+  "nombre": "Quepos",
+  "path": "/puntarenas/quepos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60601",
+  "nombre": "Quepos",
+  "path": "/puntarenas/quepos/quepos"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60602",
+  "nombre": "Savegre",
+  "path": "/puntarenas/quepos/savegre"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60603",
+  "nombre": "Naranjito",
+  "path": "/puntarenas/quepos/naranjito"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "607",
+  "nombre": "Golfito",
+  "path": "/puntarenas/golfito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60701",
+  "nombre": "Golfito",
+  "path": "/puntarenas/golfito/golfito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60703",
+  "nombre": "Guaycara",
+  "path": "/puntarenas/golfito/guaycara"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60704",
+  "nombre": "Pavón",
+  "path": "/puntarenas/golfito/pavon"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "608",
+  "nombre": "Coto Brus",
+  "path": "/puntarenas/coto-brus"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60801",
+  "nombre": "San Vito",
+  "path": "/puntarenas/coto-brus/san-vito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60802",
+  "nombre": "Sabalito",
+  "path": "/puntarenas/coto-brus/sabalito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60803",
+  "nombre": "Aguabuena",
+  "path": "/puntarenas/coto-brus/aguabuena"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60804",
+  "nombre": "Limoncito",
+  "path": "/puntarenas/coto-brus/limoncito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60805",
+  "nombre": "Pittier",
+  "path": "/puntarenas/coto-brus/pittier"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60806",
+  "nombre": "Gutiérrez Braun",
+  "path": "/puntarenas/coto-brus/gutierrez-braun"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "609",
+  "nombre": "Parrita",
+  "path": "/puntarenas/parrita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "60901",
+  "nombre": "Parrita",
+  "path": "/puntarenas/parrita/parrita"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "610",
+  "nombre": "Corredores",
+  "path": "/puntarenas/corredores"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61001",
+  "nombre": "Corredor",
+  "path": "/puntarenas/corredores/corredor"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61002",
+  "nombre": "La Cuesta",
+  "path": "/puntarenas/corredores/la-cuesta"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61003",
+  "nombre": "Canoas",
+  "path": "/puntarenas/corredores/canoas"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61004",
+  "nombre": "Laurel",
+  "path": "/puntarenas/corredores/laurel"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "611",
+  "nombre": "Garabito",
+  "path": "/puntarenas/garabito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61101",
+  "nombre": "Jacó",
+  "path": "/puntarenas/garabito/jaco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61102",
+  "nombre": "Tárcoles",
+  "path": "/puntarenas/garabito/tarcoles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61103",
+  "nombre": "Lagunillas",
+  "path": "/puntarenas/garabito/lagunillas"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "612",
+  "nombre": "Monteverde",
+  "path": "/puntarenas/monteverde"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61201",
+  "nombre": "Monteverde",
+  "path": "/puntarenas/monteverde/monteverde"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "613",
+  "nombre": "Puerto Jiménez",
+  "path": "/puntarenas/puerto-jimenez"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "61301",
+  "nombre": "Puerto Jiménez",
+  "path": "/puntarenas/puerto-jimenez/puerto-jimenez"
+ },
+ {
+  "tipo": "provincia",
+  "codigo": "7",
+  "nombre": "Limón",
+  "path": "/limon"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "701",
+  "nombre": "Limón",
+  "path": "/limon/limon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70101",
+  "nombre": "Limón",
+  "path": "/limon/limon/limon"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70102",
+  "nombre": "Valle La Estrella",
+  "path": "/limon/limon/valle-la-estrella"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70103",
+  "nombre": "Río Blanco",
+  "path": "/limon/limon/rio-blanco"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70104",
+  "nombre": "Matama",
+  "path": "/limon/limon/matama"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "702",
+  "nombre": "Pococí",
+  "path": "/limon/pococi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70201",
+  "nombre": "Guápiles",
+  "path": "/limon/pococi/guapiles"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70202",
+  "nombre": "Jiménez",
+  "path": "/limon/pococi/jimenez"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70203",
+  "nombre": "Rita",
+  "path": "/limon/pococi/rita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70204",
+  "nombre": "Roxana",
+  "path": "/limon/pococi/roxana"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70205",
+  "nombre": "Cariari",
+  "path": "/limon/pococi/cariari"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70206",
+  "nombre": "Colorado",
+  "path": "/limon/pococi/colorado"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70207",
+  "nombre": "La Colonia",
+  "path": "/limon/pococi/la-colonia"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "703",
+  "nombre": "Siquirres",
+  "path": "/limon/siquirres"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70301",
+  "nombre": "Siquirres",
+  "path": "/limon/siquirres/siquirres"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70302",
+  "nombre": "Pacuarito",
+  "path": "/limon/siquirres/pacuarito"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70303",
+  "nombre": "Florida",
+  "path": "/limon/siquirres/florida"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70304",
+  "nombre": "Germania",
+  "path": "/limon/siquirres/germania"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70305",
+  "nombre": "El Cairo",
+  "path": "/limon/siquirres/el-cairo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70306",
+  "nombre": "Alegría",
+  "path": "/limon/siquirres/alegria"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70307",
+  "nombre": "Reventazón",
+  "path": "/limon/siquirres/reventazon"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "704",
+  "nombre": "Talamanca",
+  "path": "/limon/talamanca"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70401",
+  "nombre": "Bratsi",
+  "path": "/limon/talamanca/bratsi"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70402",
+  "nombre": "Sixaola",
+  "path": "/limon/talamanca/sixaola"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70403",
+  "nombre": "Cahuita",
+  "path": "/limon/talamanca/cahuita"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70404",
+  "nombre": "Telire",
+  "path": "/limon/talamanca/telire"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "705",
+  "nombre": "Matina",
+  "path": "/limon/matina"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70501",
+  "nombre": "Matina",
+  "path": "/limon/matina/matina"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70502",
+  "nombre": "Batán",
+  "path": "/limon/matina/batan"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70503",
+  "nombre": "Carrandi",
+  "path": "/limon/matina/carrandi"
+ },
+ {
+  "tipo": "canton",
+  "codigo": "706",
+  "nombre": "Guácimo",
+  "path": "/limon/guacimo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70601",
+  "nombre": "Guácimo",
+  "path": "/limon/guacimo/guacimo"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70602",
+  "nombre": "Mercedes",
+  "path": "/limon/guacimo/mercedes"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70603",
+  "nombre": "Pocora",
+  "path": "/limon/guacimo/pocora"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70604",
+  "nombre": "Río Jiménez",
+  "path": "/limon/guacimo/rio-jimenez"
+ },
+ {
+  "tipo": "distrito",
+  "codigo": "70605",
+  "nombre": "Duacarí",
+  "path": "/limon/guacimo/duacari"
+ }
+]

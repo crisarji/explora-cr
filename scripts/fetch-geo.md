@@ -1,16 +1,30 @@
 # Data pipeline notes (Phase 1)
 
-## Sources (pick ONE as source of truth and record it in PLAN.md §3)
+## Source of truth (decided 2026-07-13)
 
-1. IGN (Instituto Geográfico Nacional) — official WFS geoservice.
-2. https://github.com/schweini/CR_distritos_geojson — provincias/cantones/distritos in GeoJSON.
-3. https://github.com/investigacion/divisiones-territoriales-data — names/codes hierarchy (CSV/JSON).
+**IGN SNIT WFS geoservice** — `https://geos.snitcr.go.cr/be/IGN_5_CO/wfs`, layer
+`IGN_5_CO:limitedistrital_5k` (1:5000 district boundaries, versión 20260410001).
+7 provincias / 84 cantones / 494 distritos.
 
-## Pipeline (build-topo.ts, to be written in Phase 1)
+Sources evaluated and rejected:
 
-1. Download raw GeoJSON for the three levels.
-2. Merge into one file with three named layers: provincias, cantones, distritos.
-3. Simplify with mapshaper (`-simplify 8% keep-shapes`) — target < 500 KB total.
-4. Emit data/geo/costa-rica.topo.json.
-5. Regenerate data/divisiones.json + data/slugs.json from the same source.
-6. Run scripts/validate.ts (asserts 7 provincias / 84 cantones / N distritos).
+- https://github.com/schweini/CR_distritos_geojson — outdated: 81 cantons
+  (pre-2017, missing Río Cuarto, Monteverde, Puerto Jiménez).
+- https://github.com/investigacion/divisiones-territoriales-data — same problem
+  (README says "Los 81 cantones"), and has no geometry.
+
+The IGN district layer carries the full hierarchy in its properties
+(`CÓDIGO_DTA`, `DISTRITO`, `CÓDIGO_CANTÓN`, `CANTÓN`, `CÓDIGO_PROVINCIA`,
+`PROVINCIA`), so both geometry and `divisiones.json` derive from this one layer.
+
+## Pipeline (`npm run build:topo` → scripts/build-topo.mts)
+
+1. Download the district layer as GeoJSON (EPSG:4326) → `data/geo/raw/`
+   (~60 MB, gitignored, cached — delete to force re-download).
+2. Simplify with mapshaper (`-simplify 2.5% keep-shapes`).
+3. Dissolve districts → cantones → provincias so all three layers share arcs.
+4. Emit `data/geo/costa-rica.topo.json` (3 layers, 445 KB).
+5. Emit `data/divisiones.json` (hierarchy + slugs) and `data/slugs.json`
+   (flat region index with URL paths, feeds Phase 6 search).
+6. `npm run validate` asserts counts, unique codes, scope-unique slugs,
+   topo/hierarchy consistency, and the < 500 KB size budget.

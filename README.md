@@ -1,9 +1,10 @@
 # Explora Costa Rica
 
-Interactive, animated map of Costa Rica's 7 provinces, 84 cantons, and ~490
+Interactive, animated map of Costa Rica's 7 provinces, 84 cantons, and 494
 districts. A free social service and learning project.
 
-**Status:** Phase 0 — skeleton. See [PLAN.md](./PLAN.md) for the full roadmap.
+**Status:** Phase 1 complete — official IGN data pipeline done. See
+[PLAN.md](./PLAN.md) for the full roadmap.
 
 ## Getting started
 

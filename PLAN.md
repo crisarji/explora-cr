@@ -42,7 +42,9 @@ A modern, beautiful web experience where anyone can explore Costa Rica's politic
 - **github.com/investigacion/divisiones-territoriales-data** — names, codes, and hierarchy in CSV/JSON.
 - **arce's Costa Rica TopoJSON gist** — reference for a single-file TopoJSON structure.
 
-> ⚠️ Sources disagree slightly on district counts (489–492) because new districts get created. Pick ONE source of truth in Phase 1 and record it here: `source: ______, date: ______, districts: ______`.
+> ⚠️ Sources disagree slightly on district counts (489–492) because new districts get created. Pick ONE source of truth in Phase 1 and record it here: `source: IGN SNIT WFS (IGN_5_CO:limitedistrital_5k, versión 20260410001), date: 2026-07-13, districts: 494`.
+>
+> Phase 1 findings: both GitHub repos above are outdated (81 cantons — pre-2017, missing Río Cuarto, Monteverde, and Puerto Jiménez). The IGN WFS is authoritative **and** current, so it is the single source: geometry and hierarchy are both derived from the district layer by `scripts/build-topo.mts`.
 
 ---
 
@@ -132,19 +134,19 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 ## 7. Build plan
 
 ### Phase 0 — Skeleton and deploy _(a weekend)_
-- [ ] `create-next-app` with TypeScript + Tailwind
-- [ ] Create all routes with placeholder content
-- [ ] Push to GitHub, connect to Vercel, deploy
-- [ ] Add this PLAN.md to the repo
+- [x] `create-next-app` with TypeScript + Tailwind
+- [x] Create all routes with placeholder content
+- [x] Push to GitHub (github.com/crisarji/explora-cr) — Vercel connect pending
+- [x] Add this PLAN.md to the repo
 
 **Learning:** App Router, project setup, CI/CD loop. _Deploy on day one — every push after this is live._
 
 ### Phase 1 — Data pipeline _(2–4 evenings)_
-- [ ] Download boundaries (IGN WFS or GitHub repos above)
-- [ ] `build-topo.ts`: merge → simplify with mapshaper (~5–10% retention) → single TopoJSON
-- [ ] Build `divisiones.json` (hierarchy) and `slugs.json` (accent-safe slugs)
-- [ ] `validate.ts` asserts expected counts; record source of truth in §3
-- [ ] Target: full-country TopoJSON with districts under ~500 KB
+- [x] Download boundaries (IGN WFS — GitHub repos turned out to be outdated, see §3)
+- [x] `build-topo.mts`: districts → simplify 2.5% (mapshaper) → dissolve up to cantones/provincias → single TopoJSON
+- [x] Build `divisiones.json` (hierarchy) and `slugs.json` (accent-safe slugs + search index)
+- [x] `validate.ts` asserts expected counts; record source of truth in §3
+- [x] Target: full-country TopoJSON with districts under ~500 KB → **445 KB**
 
 **Learning:** GeoJSON/TopoJSON, coordinate systems, simplification tradeoffs.
 

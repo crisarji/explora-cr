@@ -32,8 +32,19 @@ export default async function CantonPage({
       </nav>
       <h1 className="mt-4 text-3xl font-medium">{canton.nombre}</h1>
       <p className="mt-2 text-neutral-500">
-        Los distritos y el mapa de este cantón llegan en las Fases 1–4.
+        {canton.distritos.length} distritos. El mapa interactivo llega en las
+        Fases 2–4.
       </p>
+      <ul className="mt-6 flex flex-wrap gap-2">
+        {canton.distritos.map((d) => (
+          <li
+            key={d.codigo}
+            className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-sm text-neutral-600"
+          >
+            {d.nombre}
+          </li>
+        ))}
+      </ul>
     </section>
   );
 }
