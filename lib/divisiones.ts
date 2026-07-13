@@ -41,6 +41,26 @@ export function getCanton(
   return provincia && canton ? { provincia, canton } : undefined;
 }
 
+/**
+ * The cabecera (canton seat). By the official coding convention it is the
+ * canton's district 01; divisiones.json carries no separate cabecera field.
+ */
+export function getCabecera(canton: Canton): Distrito | undefined {
+  return (
+    canton.distritos.find((d) => d.codigo.endsWith("01")) ?? canton.distritos[0]
+  );
+}
+
+export function totalDistritos(provincia: Provincia): number {
+  return provincia.cantones.reduce((n, c) => n + c.distritos.length, 0);
+}
+
+export const totales = {
+  provincias: provincias.length,
+  cantones: provincias.reduce((n, p) => n + p.cantones.length, 0),
+  distritos: provincias.reduce((n, p) => n + totalDistritos(p), 0),
+};
+
 export function getDistrito(
   provinciaSlug: string,
   cantonSlug: string,

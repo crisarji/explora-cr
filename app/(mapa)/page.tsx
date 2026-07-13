@@ -1,26 +1,30 @@
-import Link from "next/link";
-import { provincias } from "@/lib/divisiones";
+import StatsCards from "@/components/panel/StatsCards";
+import RegionList from "@/components/panel/RegionList";
+import { provincias, totales } from "@/lib/divisiones";
 
 export default function HomePage() {
   return (
     <section>
       <h1 className="text-3xl font-medium">Costa Rica</h1>
       <p className="mt-2 text-neutral-500 dark:text-neutral-400">
-        7 provincias · 84 cantones · 494 distritos. Haz clic en una provincia
-        para explorarla.
+        Explora las divisiones territoriales del país. Haz clic en una
+        provincia para acercarte.
       </p>
-      <ul className="mt-8 flex flex-wrap gap-2" aria-label="Provincias">
-        {provincias.map((p) => (
-          <li key={p.codigo}>
-            <Link
-              href={`/${p.slug}`}
-              className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-sm hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500"
-            >
-              {p.nombre}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <StatsCards
+        stats={[
+          { label: "Provincias", value: totales.provincias },
+          { label: "Cantones", value: totales.cantones },
+          { label: "Distritos", value: totales.distritos },
+        ]}
+      />
+      <RegionList
+        title="Provincias"
+        items={provincias.map((p) => ({
+          codigo: p.codigo,
+          nombre: p.nombre,
+          href: `/${p.slug}`,
+        }))}
+      />
     </section>
   );
 }

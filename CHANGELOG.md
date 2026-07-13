@@ -5,6 +5,8 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Added
+- Phase 4 full drill-down: district pages at `/[provincia]/[canton]/[distrito]` (494 routes; 590 static pages total), with the district layer rendered on the map for the active canton only and zoom-to-district on navigation — including Isla del Coco, whose page flies the camera out to the island.
+- Panel components (`StatsCards`, `RegionList`) used by all four page levels: counts, cabecera (derived from the official district-01 convention), approximate area computed from the geometry (`areaKm2Of`), and child/sibling region chips.
 - Phase 3 interaction core: the map now lives in a route-group layout (`app/(mapa)/`) and persists across navigations; the URL drives the camera, so map clicks, canton chips, breadcrumbs, browser back, and direct links all animate through the same zoom-to-bounds transition (`d3-zoom`, programmatic only).
 - Hover states (lift region, dim siblings) with a cursor-following name tooltip; hover is suppressed while a zoom is animating.
 - `lib/store.ts` (Zustand) for ephemeral UI state only: hovered region, tooltip position, animation-in-flight.

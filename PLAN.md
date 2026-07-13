@@ -167,10 +167,10 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** D3 transitions, React↔D3 integration, dynamic routes.
 
 ### Phase 4 — Full drill-down _(1 week)_
-- [ ] Cantons render after province zoom; districts after canton zoom
-- [ ] SidePanel: stats, cabecera, child-region list from `divisiones.json`
-- [ ] `generateStaticParams` for all ~580 pages; verify static export builds
-- [ ] Performance pass: active-canton-only district mounting
+- [x] Cantons render after province zoom; districts after canton zoom
+- [x] SidePanel: stats (counts, approx. area from geometry), cabecera (district 01 convention), child-region list from `divisiones.json`
+- [x] `generateStaticParams` for all pages (590 total: 1 + 7 + 84 + 494 + acerca); verified static export builds
+- [x] Performance pass: active-canton-only district mounting (7 + ≤16 + ≤16 paths mounted, never all 494)
 
 **Learning:** static generation at scale, data-driven rendering, performance.
 

@@ -13,15 +13,22 @@ import {
   MAP_HEIGHT,
   provinciaFeatures,
   cantonFeatures,
+  distritoFeatures,
   zoomBoundsOf,
   type RegionFeature,
 } from "@/lib/geo";
-import { getProvincia, getProvinciaByCodigo, getCanton } from "@/lib/divisiones";
+import {
+  getProvincia,
+  getProvinciaByCodigo,
+  getCanton,
+  getDistrito,
+} from "@/lib/divisiones";
 import { useUIStore, type HoveredRegion } from "@/lib/store";
 
 /**
  * Distinct fill per province, readable in light and dark. Keyed by the
  * official province code so colors stay stable across data regenerations.
+ * Cantons and districts inherit their province's hue.
  */
 const PROVINCE_FILL: Record<string, string> = {
   "1": "fill-indigo-300 dark:fill-indigo-600/70", // San José
@@ -59,10 +66,14 @@ export default function MapCanvas() {
   const setAnimating = useUIStore((s) => s.setAnimating);
 
   // URL → active regions. The URL is the only source of truth for selection.
-  const [provSlug, cantonSlug] = pathname.split("/").filter(Boolean);
+  const [provSlug, cantonSlug, distritoSlug] = pathname.split("/").filter(Boolean);
   const provincia = provSlug ? getProvincia(provSlug) : undefined;
   const canton =
     provincia && cantonSlug ? getCanton(provSlug, cantonSlug)?.canton : undefined;
+  const distrito =
+    canton && distritoSlug
+      ? getDistrito(provSlug, cantonSlug, distritoSlug)?.distrito
+      : undefined;
 
   const provinciaFeature = useMemo(
     () =>
@@ -75,7 +86,15 @@ export default function MapCanvas() {
       cantonFeatures.find((f) => f.properties.codigo === canton?.codigo) ?? null,
     [canton?.codigo]
   );
-  // Only the active province's cantons are mounted (PLAN.md rule 5).
+  const distritoFeature = useMemo(
+    () =>
+      distritoFeatures.find((f) => f.properties.codigo === distrito?.codigo) ??
+      null,
+    [distrito?.codigo]
+  );
+
+  // Only the active province's cantons and the active canton's districts
+  // are mounted (PLAN.md rule 5) — never all 494 districts at once.
   const cantonesDeProvincia = useMemo(
     () =>
       provincia
@@ -85,9 +104,22 @@ export default function MapCanvas() {
         : [],
     [provincia]
   );
+  const distritosDeCanton = useMemo(
+    () =>
+      canton
+        ? distritoFeatures.filter(
+            (f) => f.properties.codigoCanton === canton.codigo
+          )
+        : [],
+    [canton]
+  );
   const cantonSlugByCodigo = useMemo(
     () => new Map(provincia?.cantones.map((c) => [c.codigo, c.slug]) ?? []),
     [provincia]
+  );
+  const distritoSlugByCodigo = useMemo(
+    () => new Map(canton?.distritos.map((d) => [d.codigo, d.slug]) ?? []),
+    [canton]
   );
 
   // D3 zoom behavior — created once, used programmatically only.
@@ -101,8 +133,10 @@ export default function MapCanvas() {
   // Route change → zoom-to-bounds transition.
   useEffect(() => {
     if (!zoomRef.current || !svgRef.current) return;
-    const target = cantonFeature ?? provinciaFeature;
-    const transform = target ? fitTransform(zoomBoundsOf(target)) : zoomIdentity;
+    const target = distritoFeature ?? cantonFeature ?? provinciaFeature;
+    const transform = target
+      ? fitTransform(zoomBoundsOf(target))
+      : zoomIdentity;
     setAnimating(true);
     setHovered(null);
     setTooltip(null);
@@ -111,7 +145,14 @@ export default function MapCanvas() {
       .duration(zoomDuration())
       .call(zoomRef.current.transform, transform)
       .on("end interrupt cancel", () => setAnimating(false));
-  }, [cantonFeature, provinciaFeature, setAnimating, setHovered, setTooltip]);
+  }, [
+    distritoFeature,
+    cantonFeature,
+    provinciaFeature,
+    setAnimating,
+    setHovered,
+    setTooltip,
+  ]);
 
   const moveTooltip = (e: React.MouseEvent) => {
     const rect = containerRef.current?.getBoundingClientRect();
@@ -134,6 +175,8 @@ export default function MapCanvas() {
     startHover("provincia", f, e);
   const hoverCanton = (f: RegionFeature, e: React.MouseEvent) =>
     startHover("canton", f, e);
+  const hoverDistrito = (f: RegionFeature, e: React.MouseEvent) =>
+    startHover("distrito", f, e);
   const endHover = () => {
     setHovered(null);
     setTooltip(null);
@@ -144,8 +187,8 @@ export default function MapCanvas() {
     const fill = PROVINCE_FILL[codigo] ?? "fill-neutral-300";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (provincia) {
-      // Zoomed to a province: the active one sits under its cantons;
-      // the rest recede.
+      // Zoomed in: the active province sits under its cantons; the rest
+      // recede.
       return provincia.codigo === codigo
         ? base
         : `${base} opacity-30 saturate-50`;
@@ -162,7 +205,24 @@ export default function MapCanvas() {
       : "fill-neutral-300";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (canton) {
+      // The active canton sits under its districts; siblings recede.
       return canton.codigo === codigo
+        ? base
+        : `${base} opacity-40 saturate-50`;
+    }
+    if (hoveredCodigo === codigo) return `${base} brightness-110`;
+    if (hoveredCodigo) return `${base} opacity-75`;
+    return base;
+  };
+
+  const distritoClass = (f: RegionFeature) => {
+    const codigo = f.properties.codigo;
+    const fill = provincia
+      ? PROVINCE_FILL[provincia.codigo]
+      : "fill-neutral-300";
+    const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
+    if (distrito) {
+      return distrito.codigo === codigo
         ? `${base} brightness-110`
         : `${base} opacity-40 saturate-50`;
     }
@@ -173,15 +233,22 @@ export default function MapCanvas() {
 
   // Background click climbs one level (reverse zoom via navigation).
   const goUp = () => {
-    if (canton && provincia) router.push(`/${provincia.slug}`);
-    else if (provincia) router.push("/");
+    if (distrito && canton && provincia) {
+      router.push(`/${provincia.slug}/${canton.slug}`);
+    } else if (canton && provincia) {
+      router.push(`/${provincia.slug}`);
+    } else if (provincia) {
+      router.push("/");
+    }
   };
 
-  const ariaLabel = canton
-    ? `Mapa del cantón ${canton.nombre}`
-    : provincia
-      ? `Mapa de la provincia de ${provincia.nombre}`
-      : "Mapa de las 7 provincias de Costa Rica";
+  const ariaLabel = distrito
+    ? `Mapa del distrito ${distrito.nombre}`
+    : canton
+      ? `Mapa del cantón ${canton.nombre}`
+      : provincia
+        ? `Mapa de la provincia de ${provincia.nombre}`
+        : "Mapa de las 7 provincias de Costa Rica";
 
   return (
     <div ref={containerRef} className="relative">
@@ -218,6 +285,18 @@ export default function MapCanvas() {
                 `/${provincia.slug}/${cantonSlugByCodigo.get(f.properties.codigo) ?? ""}`
               }
               onHoverStart={hoverCanton}
+              onHoverMove={moveTooltip}
+              onHoverEnd={endHover}
+            />
+          )}
+          {provincia && canton && (
+            <GeoLayer
+              features={distritosDeCanton}
+              featureClass={distritoClass}
+              hrefOf={(f) =>
+                `/${provincia.slug}/${canton.slug}/${distritoSlugByCodigo.get(f.properties.codigo) ?? ""}`
+              }
+              onHoverStart={hoverDistrito}
               onHoverMove={moveTooltip}
               onHoverEnd={endHover}
             />

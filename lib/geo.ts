@@ -1,4 +1,4 @@
-import { geoMercator, geoPath, type GeoPermissibleObjects } from "d3-geo";
+import { geoArea, geoMercator, geoPath, type GeoPermissibleObjects } from "d3-geo";
 import { feature } from "topojson-client";
 import type { Topology, Objects } from "topojson-specification";
 import type { Feature, FeatureCollection, MultiPolygon, Polygon } from "geojson";
@@ -81,6 +81,30 @@ export function labelPointOf(featureObj: RegionFeature): [number, number] {
 // by d3-geo's default digits(3)).
 function roundPoint([x, y]: [number, number]): [number, number] {
   return [Math.round(x * 100) / 100, Math.round(y * 100) / 100];
+}
+
+const LAYER_FEATURES = {
+  provincia: provinciaFeatures,
+  canton: cantonFeatures,
+  distrito: distritoFeatures,
+} as const;
+
+export function getFeature(
+  nivel: keyof typeof LAYER_FEATURES,
+  codigo: string
+): RegionFeature | undefined {
+  return LAYER_FEATURES[nivel].find((f) => f.properties.codigo === codigo);
+}
+
+const EARTH_RADIUS_KM = 6371;
+
+/**
+ * Approximate area in km², computed from the (simplified) geometry via
+ * spherical excess — good to a few percent, so callers should present it
+ * as approximate.
+ */
+export function areaKm2Of(featureObj: RegionFeature): number {
+  return Math.round(geoArea(featureObj) * EARTH_RADIUS_KM * EARTH_RADIUS_KM);
 }
 
 /** Projected bounding box, for zoom-to-bounds transitions. */
