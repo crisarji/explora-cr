@@ -28,6 +28,10 @@ export function getProvincia(slug: string): Provincia | undefined {
   return provincias.find((p) => p.slug === slug);
 }
 
+export function getProvinciaByCodigo(codigo: string): Provincia | undefined {
+  return provincias.find((p) => p.codigo === codigo);
+}
+
 export function getCanton(
   provinciaSlug: string,
   cantonSlug: string

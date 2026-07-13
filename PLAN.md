@@ -2,7 +2,7 @@
 
 An interactive, animated map of Costa Rica's territorial divisions — 7 provinces, 84 cantons, and ~490 districts — built as a free social service and a personal learning project.
 
-**Live site:** _(add Vercel URL after Phase 0)_
+**Live site:** https://explora-cr.vercel.app
 
 ---
 
@@ -136,7 +136,7 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 ### Phase 0 — Skeleton and deploy _(a weekend)_
 - [x] `create-next-app` with TypeScript + Tailwind
 - [x] Create all routes with placeholder content
-- [x] Push to GitHub (github.com/crisarji/explora-cr) — Vercel connect pending
+- [x] Push to GitHub (github.com/crisarji/explora-cr), deployed to Vercel (explora-cr.vercel.app)
 - [x] Add this PLAN.md to the repo
 
 **Learning:** App Router, project setup, CI/CD loop. _Deploy on day one — every push after this is live._
@@ -151,10 +151,10 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** GeoJSON/TopoJSON, coordinate systems, simplification tradeoffs.
 
 ### Phase 2 — Static map _(1 week)_
-- [ ] `geoMercator` (or `geoConicConformal`) fitted to country bounds
-- [ ] Render 7 provinces with `geoPath`, distinct colors, labels
-- [ ] Responsive SVG (viewBox scaling), dark mode palette
-- [ ] De-risk Phase 3: throwaway prototype of zoom-to-bounds on a test page
+- [x] `geoMercator` fitted to mainland bounds (Isla del Coco excluded from the fit — needs an inset later)
+- [x] Render 7 provinces with `geoPath`, distinct colors, labels (largest-polygon anchor, not raw centroid)
+- [x] Responsive SVG (viewBox scaling), dark mode palette
+- [x] De-risk Phase 3: throwaway prototype of zoom-to-bounds at `/prototipo`
 
 **Learning:** projections, `geoPath`, SVG fundamentals.
 
