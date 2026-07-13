@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Breadcrumb from "@/components/Breadcrumb";
 import { getProvincia, provincias } from "@/lib/divisiones";
 
 export function generateStaticParams() {
@@ -17,24 +18,22 @@ export default async function ProvinciaPage({
 
   return (
     <section>
-      <nav className="text-sm text-neutral-500">
-        <Link href="/" className="hover:text-neutral-900">
-          Costa Rica
-        </Link>{" "}
-        / <span className="text-neutral-900">{provincia.nombre}</span>
-      </nav>
+      <Breadcrumb
+        items={[
+          { nombre: "Costa Rica", href: "/" },
+          { nombre: provincia.nombre },
+        ]}
+      />
       <h1 className="mt-4 text-3xl font-medium">{provincia.nombre}</h1>
-      <p className="mt-2 text-neutral-500">
-        {provincia.cantones.length > 0
-          ? "Cantones:"
-          : "Los cantones de esta provincia se cargan en la Fase 1 (pipeline de datos)."}
+      <p className="mt-2 text-neutral-500 dark:text-neutral-400">
+        {provincia.cantones.length} cantones. Haz clic en uno para acercarte.
       </p>
-      <ul className="mt-6 flex flex-wrap gap-2">
+      <ul className="mt-6 flex flex-wrap gap-2" aria-label="Cantones">
         {provincia.cantones.map((c) => (
           <li key={c.codigo}>
             <Link
               href={`/${provincia.slug}/${c.slug}`}
-              className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-sm hover:border-neutral-400"
+              className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-sm hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500"
             >
               {c.nombre}
             </Link>

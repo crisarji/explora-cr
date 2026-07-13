@@ -159,10 +159,10 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** projections, `geoPath`, SVG fundamentals.
 
 ### Phase 3 — Interaction core _(1–2 weeks — the riskiest phase)_
-- [ ] Hover: lift region, dim neighbors, tooltip with name
-- [ ] Click province → `router.push` → zoom-to-bounds transition on arrival
-- [ ] Breadcrumb + back navigation with reverse zoom
-- [ ] Keyboard focus/activation on regions (a11y)
+- [x] Hover: lift region, dim neighbors, tooltip with name
+- [x] Click province → `router.push` → zoom-to-bounds transition on arrival (URL drives the camera; clicks, breadcrumbs, back button, and direct links all animate through one code path)
+- [x] Breadcrumb + back navigation with reverse zoom (plus background click to go up one level)
+- [x] Keyboard focus/activation on regions (a11y)
 
 **Learning:** D3 transitions, React↔D3 integration, dynamic routes.
 

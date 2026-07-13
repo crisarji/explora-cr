@@ -63,7 +63,7 @@ export function centroidOf(featureObj: GeoPermissibleObjects): [number, number] 
  */
 export function labelPointOf(featureObj: RegionFeature): [number, number] {
   const geom = featureObj.geometry;
-  if (geom.type === "Polygon") return path.centroid(featureObj);
+  if (geom.type === "Polygon") return roundPoint(path.centroid(featureObj));
   let largest = geom.coordinates[0];
   let largestArea = 0;
   for (const coords of geom.coordinates) {
@@ -73,10 +73,43 @@ export function labelPointOf(featureObj: RegionFeature): [number, number] {
       largest = coords;
     }
   }
-  return path.centroid({ type: "Polygon", coordinates: largest });
+  return roundPoint(path.centroid({ type: "Polygon", coordinates: largest }));
+}
+
+// Server and client float math can differ in the last bits; rounding keeps
+// SSR and hydration output identical (path `d` strings are already rounded
+// by d3-geo's default digits(3)).
+function roundPoint([x, y]: [number, number]): [number, number] {
+  return [Math.round(x * 100) / 100, Math.round(y * 100) / 100];
 }
 
 /** Projected bounding box, for zoom-to-bounds transitions. */
 export function boundsOf(featureObj: GeoPermissibleObjects): [[number, number], [number, number]] {
   return path.bounds(featureObj);
+}
+
+/**
+ * Bounds for zooming to a region. Polygons projected entirely outside the
+ * viewBox are ignored — Puntarenas (province and canton) contains Isla del
+ * Coco ~500 km offshore, and fitting to it would zoom *out* to empty ocean.
+ * Falls back to the full bounds when nothing intersects (the island's own
+ * district page should zoom to the island).
+ */
+export function zoomBoundsOf(f: RegionFeature): [[number, number], [number, number]] {
+  if (f.geometry.type === "Polygon") return path.bounds(f);
+  let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+  for (const coords of f.geometry.coordinates) {
+    const [[px0, py0], [px1, py1]] = path.bounds({
+      type: "Polygon",
+      coordinates: coords,
+    });
+    const intersectsViewBox =
+      px1 >= 0 && px0 <= MAP_WIDTH && py1 >= 0 && py0 <= MAP_HEIGHT;
+    if (!intersectsViewBox) continue;
+    x0 = Math.min(x0, px0);
+    y0 = Math.min(y0, py0);
+    x1 = Math.max(x1, px1);
+    y1 = Math.max(y1, py1);
+  }
+  return x0 === Infinity ? path.bounds(f) : [[x0, y0], [x1, y1]];
 }

@@ -1,5 +1,4 @@
 import Link from "next/link";
-import MapCanvas from "@/components/map/MapCanvas";
 import { provincias } from "@/lib/divisiones";
 
 export default function HomePage() {
@@ -10,9 +9,6 @@ export default function HomePage() {
         7 provincias · 84 cantones · 494 distritos. Haz clic en una provincia
         para explorarla.
       </p>
-      <div className="mt-6">
-        <MapCanvas />
-      </div>
       <ul className="mt-8 flex flex-wrap gap-2" aria-label="Provincias">
         {provincias.map((p) => (
           <li key={p.codigo}>

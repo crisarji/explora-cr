@@ -5,6 +5,19 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Added
+- Phase 3 interaction core: the map now lives in a route-group layout (`app/(mapa)/`) and persists across navigations; the URL drives the camera, so map clicks, canton chips, breadcrumbs, browser back, and direct links all animate through the same zoom-to-bounds transition (`d3-zoom`, programmatic only).
+- Hover states (lift region, dim siblings) with a cursor-following name tooltip; hover is suppressed while a zoom is animating.
+- `lib/store.ts` (Zustand) for ephemeral UI state only: hovered region, tooltip position, animation-in-flight.
+- Shared `Breadcrumb` component on province/canton pages; clicking the map background climbs one level.
+- Keyboard accessibility: map regions are focusable links activated with Enter.
+- `zoomBoundsOf` in `lib/geo.ts`: zoom fits ignore polygons outside the viewBox, so Puntarenas zooms to its mainland instead of fitting Isla del Coco 500 km offshore.
+- `prefers-reduced-motion` collapses zoom transitions to instant.
+
+### Removed
+- `/prototipo` zoom prototype (superseded by the real interaction core).
+
+### Fixed
+- Hydration mismatch from float nondeterminism in label centroids (rounded to 2 decimals).
 - Phase 2 static map: home page renders the 7 provinces as a responsive, colored SVG map (`components/map/MapCanvas.tsx` + reusable `GeoLayer`), with labels anchored to each province's largest polygon and click-through to province pages.
 - `lib/geo.ts`: TopoJSON→GeoJSON features, Mercator projection fitted to mainland bounds (Isla del Coco excluded from the fit), path/centroid/bounds helpers.
 - Dark-mode palette across the app shell and map.
