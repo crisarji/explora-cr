@@ -27,8 +27,12 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-lienzo text-tinta antialiased">
         <Header />
-        <main className="mx-auto max-w-5xl px-6 py-10">{children}</main>
-        <footer className="border-t border-borde px-6 py-6 text-center text-sm text-suave">
+        {/* md:pb-14 reserves room for the fixed footer so it never covers
+            the last bit of content on desktop. */}
+        <main className="mx-auto max-w-5xl px-6 pb-10 pt-10 md:pb-14">
+          {children}
+        </main>
+        <footer className="border-t border-borde bg-lienzo px-6 py-2.5 text-center text-xs text-suave md:fixed md:inset-x-0 md:bottom-0 md:z-30">
           <T k="footer.texto" />
         </footer>
         <Analytics />

@@ -8,6 +8,8 @@ export interface RegionItem {
   codigo: string;
   nombre: string;
   href: string;
+  /** Optional bg-* Tailwind class for a leading color dot (see lib/provinceColors.ts). */
+  colorSwatch?: string;
 }
 
 /** Chip list linking to child (or sibling) regions, revealed one by one. */
@@ -53,8 +55,16 @@ export default function RegionList({
           <motion.li key={item.codigo} variants={chip}>
             <Link
               href={item.href}
-              className="inline-block rounded-full border border-borde px-4 py-1.5 text-sm hover:border-suave"
+              className={`inline-flex items-center gap-2 rounded-full border border-borde py-1.5 pr-4 text-sm hover:border-suave ${
+                item.colorSwatch ? "pl-2.5" : "pl-4"
+              }`}
             >
+              {item.colorSwatch && (
+                <span
+                  aria-hidden="true"
+                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${item.colorSwatch}`}
+                />
+              )}
               {item.nombre}
             </Link>
           </motion.li>

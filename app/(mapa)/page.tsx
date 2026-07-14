@@ -2,6 +2,7 @@ import StatsCards from "@/components/panel/StatsCards";
 import RegionList from "@/components/panel/RegionList";
 import T from "@/components/T";
 import { provincias, totales } from "@/lib/divisiones";
+import { PROVINCE_COLORS } from "@/lib/provinceColors";
 
 export default function HomePage() {
   return (
@@ -23,6 +24,7 @@ export default function HomePage() {
           codigo: p.codigo,
           nombre: p.nombre,
           href: `/${p.slug}`,
+          colorSwatch: PROVINCE_COLORS[p.codigo]?.swatch,
         }))}
       />
     </section>

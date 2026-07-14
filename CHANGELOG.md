@@ -5,6 +5,8 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Changed
+- Footer is now fixed to the bottom of the viewport on desktop (`md:` breakpoint and up); stays in normal flow on mobile. `main` reserves matching bottom padding so content never sits underneath it.
+- Home-page province chips gained a small color dot matching that province's exact map fill — `lib/provinceColors.ts` is now the single source of truth both MapCanvas and the chips read from, so the two can't drift apart.
 - Header redesigned: Costa Rican flag ribbon + brand dot, segmented Mapa/Jugar/Acerca navigation showing the active section, and a tools capsule (search, language, theme). Search shortcut label is platform-aware (Ctrl K / ⌘K).
 - Breadcrumb redesigned as clickable chips: ancestors read as buttons (border, hover lift, home icon on the root), current level is a solid accent chip — clicking a chip zooms the map back out to that level.
 - Dark/light mode is now an explicit header toggle persisted per visitor (system preference only seeds the first visit).
