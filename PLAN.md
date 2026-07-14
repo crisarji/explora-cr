@@ -192,10 +192,10 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** fuzzy search, accessibility, Next.js metadata API.
 
 ### Phase 7 — Extras _(open-ended)_
-- [ ] Canton fact cards (`data/facts/`)
-- [ ] "Guess the canton" quiz mode — the educational/social-service star feature
-- [ ] Share buttons, privacy-friendly analytics (e.g. Plausible/Umami)
-- [ ] README with screenshots + open-source license (MIT suggested)
+- [x] Canton fact cards (`data/facts/` — hand-curated, 10 of 84 cantons seeded; see data/facts/README.md)
+- [x] "Guess the canton" quiz mode at `/juego` — 10 rounds, 4 same-province choices, bilingual
+- [x] Share button (native share sheet / clipboard fallback, no third-party scripts). _Analytics pending: needs an account decision (Plausible/Umami/none)._
+- [x] README with generated map artwork (`scripts/render-map-svg.mts` → docs/mapa.svg) + MIT license
 
 ---
 

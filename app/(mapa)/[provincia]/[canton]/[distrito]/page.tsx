@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import StatsCards from "@/components/panel/StatsCards";
 import RegionList from "@/components/panel/RegionList";
 import T from "@/components/T";
+import ShareButton from "@/components/panel/ShareButton";
 import { getDistrito, getCabecera, provincias } from "@/lib/divisiones";
 import { getFeature, areaKm2Of } from "@/lib/geo";
 
@@ -70,6 +71,7 @@ export default async function DistritoPage({
           params={{ canton: canton.nombre, provincia: provincia.nombre }}
         />
       </p>
+      <ShareButton />
       <StatsCards
         stats={[
           { labelKey: "stats.codigo", value: distrito.codigo },

@@ -4,7 +4,10 @@ import Breadcrumb from "@/components/Breadcrumb";
 import StatsCards from "@/components/panel/StatsCards";
 import RegionList from "@/components/panel/RegionList";
 import T from "@/components/T";
+import FactCard from "@/components/panel/FactCard";
+import ShareButton from "@/components/panel/ShareButton";
 import { getCanton, getCabecera, provincias } from "@/lib/divisiones";
+import { getFact } from "@/lib/facts";
 import { getFeature, areaKm2Of } from "@/lib/geo";
 
 export function generateStaticParams() {
@@ -42,6 +45,7 @@ export default async function CantonPage({
 
   const feature = getFeature("canton", canton.codigo);
   const cabecera = getCabecera(canton);
+  const fact = getFact(canton.codigo);
 
   return (
     <section>
@@ -56,6 +60,8 @@ export default async function CantonPage({
       <p className="mt-2 text-neutral-500 dark:text-neutral-400">
         <T k="canton.intro" params={{ provincia: provincia.nombre }} />
       </p>
+      <ShareButton />
+      {fact && <FactCard fact={fact} />}
       <StatsCards
         stats={[
           { labelKey: "stats.distritos", value: canton.distritos.length },

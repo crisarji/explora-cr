@@ -4,6 +4,7 @@ import Breadcrumb from "@/components/Breadcrumb";
 import StatsCards from "@/components/panel/StatsCards";
 import RegionList from "@/components/panel/RegionList";
 import T from "@/components/T";
+import ShareButton from "@/components/panel/ShareButton";
 import { getProvincia, provincias, totalDistritos } from "@/lib/divisiones";
 import { getFeature, areaKm2Of } from "@/lib/geo";
 
@@ -49,6 +50,7 @@ export default async function ProvinciaPage({
       <p className="mt-2 text-neutral-500 dark:text-neutral-400">
         <T k="prov.intro" />
       </p>
+      <ShareButton />
       <StatsCards
         stats={[
           { labelKey: "stats.cantones", value: provincia.cantones.length },

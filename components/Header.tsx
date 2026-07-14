@@ -37,6 +37,12 @@ export default function Header() {
             {lang === "es" ? "EN" : "ES"}
           </button>
           <Link
+            href="/juego"
+            className="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+          >
+            {t("nav.jugar")}
+          </Link>
+          <Link
             href="/acerca"
             className="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
           >
