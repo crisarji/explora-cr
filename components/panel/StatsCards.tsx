@@ -10,7 +10,7 @@ export interface Stat {
 export default function StatsCards({ stats }: { stats: Stat[] }) {
   const t = useT();
   return (
-    <dl className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
+    <dl className="mt-6 grid grid-cols-3 gap-2 sm:gap-3">
       {stats.map((s) => (
         <div
           key={s.labelKey}

@@ -5,6 +5,8 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Changed
+- Mobile pass on the header: the segmented nav and tools capsule (search/language/theme) were unreachable off-screen below ~480px width. Replaced with a compact bar (brand + search icon + hamburger) that expands into a full-width menu with stacked nav links and lang/theme buttons; closes automatically on navigation. Desktop layout (Header B) is untouched — the collapse only triggers below the `md` breakpoint.
+- Stats cards are always 3 columns (was 2 on mobile, leaving an orphaned third card on its own row).
 - Footer is now fixed to the bottom of the viewport on desktop (`md:` breakpoint and up); stays in normal flow on mobile. `main` reserves matching bottom padding so content never sits underneath it.
 - Home-page province chips gained a small color dot matching that province's exact map fill — `lib/provinceColors.ts` is now the single source of truth both MapCanvas and the chips read from, so the two can't drift apart.
 - Header redesigned: Costa Rican flag ribbon + brand dot, segmented Mapa/Jugar/Acerca navigation showing the active section, and a tools capsule (search, language, theme). Search shortcut label is platform-aware (Ctrl K / ⌘K).
