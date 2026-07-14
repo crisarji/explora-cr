@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import Link from "next/link";
 import SearchCommand from "@/components/SearchCommand";
 import { useLangStore, useT, storedLang } from "@/lib/i18n";
+import { useTheme } from "@/lib/theme";
 
 export default function Header() {
   const t = useT();
   const lang = useLangStore((s) => s.lang);
   const setLang = useLangStore((s) => s.setLang);
+  const { theme, toggle } = useTheme();
 
   // Apply the stored language post-hydration (server HTML is Spanish).
   useEffect(() => {
@@ -35,6 +37,14 @@ export default function Header() {
             className="rounded-md border border-borde px-2.5 py-1.5 text-sm text-suave hover:border-suave"
           >
             {lang === "es" ? "EN" : "ES"}
+          </button>
+          <button
+            type="button"
+            onClick={toggle}
+            aria-label={t("tema.cambiar")}
+            className="rounded-md border border-borde px-2.5 py-1.5 text-sm text-suave hover:border-suave"
+          >
+            {theme === "dark" ? "☀" : "☾"}
           </button>
           <Link
             href="/juego"

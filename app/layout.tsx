@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import T from "@/components/T";
+import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -18,7 +19,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es">
+    // suppressHydrationWarning: the pre-paint script sets data-theme on
+    // <html> before React hydrates — an expected, deliberate mismatch.
+    <html lang="es" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
+      </head>
       <body className="min-h-screen bg-lienzo text-tinta antialiased">
         <Header />
         <main className="mx-auto max-w-5xl px-6 py-10">{children}</main>

@@ -15,17 +15,20 @@
   --acento: #0d9488; /* teal */
   --acento-tinta: #ffffff; /* text on accent */
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --lienzo: #0b1e2d; /* deep ocean */
-    --superficie: #132a3c;
-    --borde: #23445c;
-    --tinta: #eaf3f8;
-    --suave: #9db8c8;
-    --acento: #2dd4bf;
-    --acento-tinta: #062a26;
-  }
+/* The theme is an explicit choice: a pre-paint script in the root layout
+   sets data-theme from localStorage (falling back to the system
+   preference), and the header button toggles it. Tailwind's dark: variant
+   follows the attribute, not the media query. */
+:root[data-theme="dark"] {
+  --lienzo: #0b1e2d; /* deep ocean */
+  --superficie: #132a3c;
+  --borde: #23445c;
+  --tinta: #eaf3f8;
+  --suave: #9db8c8;
+  --acento: #2dd4bf;
+  --acento-tinta: #062a26;
 }
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 @theme inline {
   --color-lienzo: var(--lienzo);
   --color-superficie: var(--superficie);

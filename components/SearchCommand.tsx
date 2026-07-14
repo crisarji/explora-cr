@@ -55,8 +55,18 @@ export default function SearchCommand() {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
+  // The listener accepts both Ctrl+K and ⌘K; the label defaults to the
+  // Ctrl form and switches to ⌘ on Apple platforms after hydration.
+  const [shortcut, setShortcut] = useState("Ctrl K");
   const inputRef = useRef<HTMLInputElement>(null);
   const restoreFocusRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    if (/Mac|iPhone|iPad|iPod/i.test(navigator.platform)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setShortcut("⌘K");
+    }
+  }, []);
 
   const results = useMemo(() => {
     const q = normalize(query.trim());
@@ -130,7 +140,7 @@ export default function SearchCommand() {
       >
         <span>{t("search.abrir")}</span>
         <kbd className="rounded border border-borde px-1.5 py-0.5 text-[10px] text-suave">
-          ⌘K
+          {shortcut}
         </kbd>
       </button>
 
