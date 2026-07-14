@@ -12,15 +12,15 @@ import {
   labelPointOf,
 } from "../lib/geo";
 
-// Kept in sync by hand with lib/provinceColors.ts (Tailwind hex values,
-// mostly the 300 shade) — see that file for why Heredia uses yellow, not
-// its club's red, and why Guanacaste uses the deeper 500-shade gold.
+// Kept in sync by hand with lib/provinceColors.ts (Tailwind 300-shade hex
+// values) — see that file for why Heredia uses yellow, not its club's
+// red, and why Guanacaste uses its own flag's green, not a football club.
 const FILL: Record<string, string> = {
   "1": "#d8b4fe", // San José — Saprissa purple
   "2": "#fca5a5", // Alajuela — Alajuelense red
   "3": "#93c5fd", // Cartago — Cartaginés blue
   "4": "#fcd34d", // Heredia — Herediano yellow
-  "5": "#eab308", // Guanacaste — Mun. Liberia gold (deepened off Heredia's yellow)
+  "5": "#bef264", // Guanacaste — "verdor de la pampa" from its own flag
   "6": "#fdba74", // Puntarenas — Puntarenas FC orange
   "7": "#86efac", // Limón — green
 };

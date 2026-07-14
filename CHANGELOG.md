@@ -5,7 +5,7 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Fixed
-- Guanacaste and Heredia's map fills were both Tailwind pastel yellow (measured 1.09:1 WCAG contrast — imperceptible), flagged during a mobile-viewport check. Guanacaste now uses the deeper `yellow-500`/`600` gold instead — the one exception to the palette's otherwise-uniform light-300/dark-400 shade convention, documented in `lib/provinceColors.ts`. Verified: contrast improved to 1.32:1 (light) / 1.71:1 (dark), Euclidean RGB distance from 21→60 and 14→69.
+- Guanacaste and Heredia's map fills were both Tailwind pastel yellow (measured 1.09:1 WCAG contrast — imperceptible), flagged during a mobile-viewport check. Guanacaste no longer uses a yellow/gold at all — it's not actually tied to a football club the way the other provinces are, so it now draws from its own real provincial flag (adopted 1974) instead: `lime-300`/`400`, the flag's "verdor de la pampa" (savanna green), distinct from both Heredia's yellow and Limón's true green. Verified across all 21 province-pair combinations in both themes; Guanacaste's closest neighbor is now 83 (light) / 111 (dark) Euclidean RGB distance, comfortably clear.
 
 ### Changed
 - Province map colors now match each province's real football-club identity (San José/Saprissa purple, Alajuela/Alajuelense red, Cartago/Cartaginés blue, Heredia/Herediano yellow — Alajuela and Heredia's clubs are both red, and the provinces border each other, so Heredia uses its flag-sourced yellow instead — Guanacaste/Mun. Liberia yellow, Puntarenas FC orange, Limón green by request). `lib/provinceColors.ts` documents the reasoning; `docs/mapa.svg` regenerated to match.
