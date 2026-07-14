@@ -1,6 +1,6 @@
 import { geoArea, geoMercator, geoPath, type GeoPermissibleObjects } from "d3-geo";
 import { feature } from "topojson-client";
-import type { Topology, Objects } from "topojson-specification";
+import type { Topology, Objects, GeometryCollection, GeometryObject } from "topojson-specification";
 import type { Feature, FeatureCollection, MultiPolygon, Polygon } from "geojson";
 import topoJson from "@/data/geo/costa-rica.topo.json";
 
@@ -30,7 +30,7 @@ export const distritoFeatures: RegionFeature[] = toCollection("distritos").featu
 // by array order, which can put bordering districts in the same shade).
 // topojson-client's feature() preserves geometry order 1:1 with the source
 // GeometryCollection, so zipping by index is safe.
-function arcIdsOfGeometry(geom: Objects<RegionProps>["distritos"]["geometries"][number]): Set<number> {
+function arcIdsOfGeometry(geom: GeometryObject<RegionProps>): Set<number> {
   const ids = new Set<number>();
   const addRing = (ring: readonly number[]) => {
     for (const a of ring) ids.add(a < 0 ? ~a : a);
@@ -42,10 +42,12 @@ function arcIdsOfGeometry(geom: Objects<RegionProps>["distritos"]["geometries"][
   }
   return ids;
 }
+const distritoGeometries = (topo.objects.distritos as GeometryCollection<RegionProps>)
+  .geometries;
 const distritoArcIds: Map<string, Set<number>> = new Map(
   distritoFeatures.map((f, i) => [
     f.properties.codigo,
-    arcIdsOfGeometry(topo.objects.distritos.geometries[i]),
+    arcIdsOfGeometry(distritoGeometries[i]),
   ])
 );
 function shareArc(a: Set<number>, b: Set<number>): boolean {
