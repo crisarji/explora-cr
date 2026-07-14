@@ -184,10 +184,10 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** Motion, animation choreography, motion accessibility.
 
 ### Phase 6 — Search, i18n, SEO _(1 week)_
-- [ ] Cmd+K SearchCommand over all region names (Fuse.js) → flies camera to result
-- [ ] ES/EN toggle (ES default)
-- [ ] Per-page metadata + OpenGraph images (canton name + mini-map)
-- [ ] a11y audit: ARIA on map regions, keyboard nav, contrast
+- [x] Cmd+K SearchCommand over all region names (Fuse.js, accent-insensitive) → flies camera to result (it's just `router.push` — the URL-driven camera does the rest)
+- [x] ES/EN toggle (ES default; client-side UI-string dictionary in `lib/i18n.ts`, persisted in localStorage and applied post-hydration; region names and metadata stay Spanish)
+- [x] Per-page metadata: titles with hierarchy, stat descriptions, canonical URLs (~585 pages). _OpenGraph mini-map images deferred — needs a build-time image pipeline._
+- [x] a11y audit: labeled map regions/navs/buttons, combobox pattern in search with focus restore, `aria-current` breadcrumbs, contrast pass
 
 **Learning:** fuzzy search, accessibility, Next.js metadata API.
 

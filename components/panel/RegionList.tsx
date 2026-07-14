@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, useReducedMotion } from "motion/react";
+import { useT, type StringKey, type StringParams } from "@/lib/i18n";
 
 export interface RegionItem {
   codigo: string;
@@ -11,13 +12,17 @@ export interface RegionItem {
 
 /** Chip list linking to child (or sibling) regions, revealed one by one. */
 export default function RegionList({
-  title,
+  titleKey,
+  titleParams,
   items,
 }: {
-  title: string;
+  titleKey: StringKey;
+  titleParams?: StringParams;
   items: RegionItem[];
 }) {
   const reduced = useReducedMotion();
+  const t = useT();
+  const title = t(titleKey, titleParams);
 
   if (items.length === 0) return null;
 

@@ -24,6 +24,7 @@ import {
   getDistrito,
 } from "@/lib/divisiones";
 import { useUIStore, type HoveredRegion } from "@/lib/store";
+import { useT } from "@/lib/i18n";
 
 /**
  * Distinct fill per province, readable in light and dark. Keyed by the
@@ -60,6 +61,7 @@ const FOCUS =
 export default function MapCanvas() {
   const pathname = usePathname();
   const router = useRouter();
+  const t = useT();
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
   const gRef = useRef<SVGGElement>(null);
@@ -264,12 +266,12 @@ export default function MapCanvas() {
   };
 
   const ariaLabel = distrito
-    ? `Mapa del distrito ${distrito.nombre}`
+    ? t("mapa.distrito", { nombre: distrito.nombre })
     : canton
-      ? `Mapa del cantón ${canton.nombre}`
+      ? t("mapa.canton", { nombre: canton.nombre })
       : provincia
-        ? `Mapa de la provincia de ${provincia.nombre}`
-        : "Mapa de las 7 provincias de Costa Rica";
+        ? t("mapa.provincia", { nombre: provincia.nombre })
+        : t("mapa.pais");
 
   return (
     <div ref={containerRef} className="relative">

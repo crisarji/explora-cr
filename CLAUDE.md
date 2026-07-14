@@ -35,7 +35,7 @@ There is no test runner configured yet. `npm run validate` is the closest thing 
 
 ## Conventions in this codebase
 
-- Copy is in Spanish (`<html lang="es">`); Spanish is the default locale, English toggle is a later phase.
+- Copy is in Spanish by default (`<html lang="es">`), with a client-side EN toggle: every UI string lives in the `lib/i18n.ts` dictionary (both languages — add new strings there, never hardcode them in components). Server HTML is always Spanish; the stored language applies post-hydration. Region names are proper nouns and never translate; page metadata stays Spanish.
 - Slugs are the accent-safe, URL-safe identifiers used in routes; `codigo` is the official numeric/string code from the data source; `nombre` is the display name. Keep these three distinct — don't conflate slug and nombre.
 - Tailwind CSS 4 via `@tailwindcss/postcss` (see `postcss.config.mjs`); `app/globals.css` holds the `@import "tailwindcss"` plus the map animation keyframes — no custom CSS files elsewhere.
 - Path alias `@/*` maps to the repo root (`tsconfig.json`), e.g. `@/lib/divisiones`, `@/data/divisiones.seed.json`.

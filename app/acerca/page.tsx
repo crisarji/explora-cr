@@ -1,17 +1,24 @@
+import type { Metadata } from "next";
+import T from "@/components/T";
+
+export const metadata: Metadata = {
+  title: "Acerca",
+  description:
+    "Acerca de Explora Costa Rica: proyecto gratuito de servicio social con datos abiertos del Instituto Geográfico Nacional.",
+  alternates: { canonical: "/acerca" },
+};
+
 export default function AcercaPage() {
   return (
     <section className="prose max-w-none">
-      <h1 className="text-3xl font-medium">Acerca de este proyecto</h1>
-      <p className="mt-4 text-neutral-600">
-        Explora Costa Rica es un proyecto gratuito de servicio social: un mapa
-        interactivo de las divisiones territoriales del país — 7 provincias, 84
-        cantones y sus distritos.
+      <h1 className="text-3xl font-medium">
+        <T k="acerca.titulo" />
+      </h1>
+      <p className="mt-4 text-neutral-600 dark:text-neutral-300">
+        <T k="acerca.p1" />
       </p>
-      <p className="mt-4 text-neutral-600">
-        Los límites geográficos provienen de fuentes de datos abiertos
-        (Instituto Geográfico Nacional y repositorios comunitarios). Ver
-        PLAN.md en el repositorio para el detalle de fuentes y el plan de
-        construcción.
+      <p className="mt-4 text-neutral-600 dark:text-neutral-300">
+        <T k="acerca.p2" />
       </p>
     </section>
   );

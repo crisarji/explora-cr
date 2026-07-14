@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumb from "@/components/Breadcrumb";
 import StatsCards from "@/components/panel/StatsCards";
 import RegionList from "@/components/panel/RegionList";
+import T from "@/components/T";
 import { getDistrito, getCabecera, provincias } from "@/lib/divisiones";
 import { getFeature, areaKm2Of } from "@/lib/geo";
 
@@ -15,6 +17,24 @@ export function generateStaticParams() {
       }))
     )
   );
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ provincia: string; canton: string; distrito: string }>;
+}): Promise<Metadata> {
+  const { provincia: pSlug, canton: cSlug, distrito: dSlug } = await params;
+  const match = getDistrito(pSlug, cSlug, dSlug);
+  if (!match) return {};
+  const { provincia, canton, distrito } = match;
+  return {
+    title: `${distrito.nombre}, ${canton.nombre}, ${provincia.nombre}`,
+    description: `Mapa interactivo del distrito de ${distrito.nombre}, cantón de ${canton.nombre}, ${provincia.nombre}, Costa Rica.`,
+    alternates: {
+      canonical: `/${provincia.slug}/${canton.slug}/${distrito.slug}`,
+    },
+  };
 }
 
 export default async function DistritoPage({
@@ -45,19 +65,27 @@ export default async function DistritoPage({
       />
       <h1 className="mt-4 text-3xl font-medium">{distrito.nombre}</h1>
       <p className="mt-2 text-neutral-500 dark:text-neutral-400">
-        Distrito {esCabecera ? "y cabecera " : ""}del cantón de{" "}
-        {canton.nombre}, {provincia.nombre}.
+        <T
+          k={esCabecera ? "distrito.introCabecera" : "distrito.intro"}
+          params={{ canton: canton.nombre, provincia: provincia.nombre }}
+        />
       </p>
       <StatsCards
         stats={[
-          { label: "Código", value: distrito.codigo },
+          { labelKey: "stats.codigo", value: distrito.codigo },
           ...(feature
-            ? [{ label: "Área aprox.", value: `${areaKm2Of(feature)} km²` }]
+            ? [
+                {
+                  labelKey: "stats.area" as const,
+                  value: `${areaKm2Of(feature)} km²`,
+                },
+              ]
             : []),
         ]}
       />
       <RegionList
-        title={`Otros distritos de ${canton.nombre}`}
+        titleKey="list.otrosDistritos"
+        titleParams={{ canton: canton.nombre }}
         items={canton.distritos
           .filter((d) => d.codigo !== distrito.codigo)
           .map((d) => ({
