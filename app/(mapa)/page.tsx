@@ -7,7 +7,7 @@ export default function HomePage() {
   return (
     <section>
       <h1 className="text-3xl font-medium">Costa Rica</h1>
-      <p className="mt-2 text-neutral-500 dark:text-neutral-400">
+      <p className="mt-2 text-suave">
         <T k="home.intro" />
       </p>
       <StatsCards

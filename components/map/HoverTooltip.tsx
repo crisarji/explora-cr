@@ -11,7 +11,7 @@ export default function HoverTooltip() {
 
   return (
     <div
-      className="pointer-events-none absolute z-10 rounded-md bg-neutral-900/90 px-2.5 py-1 text-xs font-medium text-white shadow-sm dark:bg-white/90 dark:text-neutral-900"
+      className="pointer-events-none absolute z-10 rounded-md bg-tinta/90 px-2.5 py-1 text-xs font-medium text-lienzo shadow-sm"
       style={{ left: tooltip.x + 14, top: tooltip.y + 14 }}
     >
       {hovered.nombre}

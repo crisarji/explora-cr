@@ -1,5 +1,41 @@
 @import "tailwindcss";
 
+/* ---- Paleta "Pura Vida" -----------------------------------------------
+   Semantic tokens that flip with the color scheme. Components use the
+   Tailwind utilities mapped below (bg-lienzo, text-tinta, border-borde,
+   text-suave, bg-acento…) and never hardcode grays, so the palette is a
+   one-file change. Dark is a deep ocean navy — never pure black — and
+   province fills stay fully saturated on it. */
+:root {
+  --lienzo: #faf7f0; /* page ground — warm sand */
+  --superficie: #ffffff; /* cards, dialogs */
+  --borde: #e8e0ce;
+  --tinta: #27303a; /* primary text */
+  --suave: #68737d; /* muted text */
+  --acento: #0d9488; /* teal */
+  --acento-tinta: #ffffff; /* text on accent */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --lienzo: #0b1e2d; /* deep ocean */
+    --superficie: #132a3c;
+    --borde: #23445c;
+    --tinta: #eaf3f8;
+    --suave: #9db8c8;
+    --acento: #2dd4bf;
+    --acento-tinta: #062a26;
+  }
+}
+@theme inline {
+  --color-lienzo: var(--lienzo);
+  --color-superficie: var(--superficie);
+  --color-borde: var(--borde);
+  --color-tinta: var(--tinta);
+  --color-suave: var(--suave);
+  --color-acento: var(--acento);
+  --color-acento-tinta: var(--acento-tinta);
+}
+
 /* ---- Map animations (Phase 5) ----------------------------------------
    Paths use pathLength="1", so dash values are length-independent.
    fill-mode is `backwards` on reveals so class-driven states (hover dim,

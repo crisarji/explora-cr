@@ -35,18 +35,18 @@ export default function QuizMap({
   );
 
   const neutral =
-    "fill-neutral-200 dark:fill-neutral-800 stroke-white dark:stroke-neutral-950";
+    "fill-superficie stroke-lienzo";
   const cantonClass = (f: RegionFeature) =>
     f.properties.codigo === targetCodigo
-      ? "fill-red-500 dark:fill-red-500 stroke-white dark:stroke-neutral-950"
-      : "fill-neutral-300 dark:fill-neutral-700 stroke-white dark:stroke-neutral-950";
+      ? "fill-red-500 stroke-lienzo"
+      : "fill-borde stroke-lienzo";
 
   return (
     <svg
       viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
       role="img"
       aria-label={t("juego.mapaLabel")}
-      className="h-auto w-full rounded-lg border border-neutral-200 dark:border-neutral-800"
+      className="h-auto w-full rounded-lg border border-borde"
     >
       <g transform={transform}>
         <GeoLayer features={provinciaFeatures} featureClass={() => neutral} />

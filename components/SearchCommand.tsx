@@ -125,11 +125,11 @@ export default function SearchCommand() {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-neutral-200 px-3 py-1.5 text-sm text-neutral-500 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500"
+        className="flex items-center gap-2 rounded-md border border-borde px-3 py-1.5 text-sm text-suave hover:border-suave"
         aria-label={t("search.titulo")}
       >
         <span>{t("search.abrir")}</span>
-        <kbd className="rounded border border-neutral-200 px-1.5 py-0.5 text-[10px] text-neutral-400 dark:border-neutral-700">
+        <kbd className="rounded border border-borde px-1.5 py-0.5 text-[10px] text-suave">
           ⌘K
         </kbd>
       </button>
@@ -143,7 +143,7 @@ export default function SearchCommand() {
             role="dialog"
             aria-modal="true"
             aria-label={t("search.titulo")}
-            className="w-full max-w-lg overflow-hidden rounded-xl border border-neutral-200 bg-white shadow-2xl dark:border-neutral-700 dark:bg-neutral-900"
+            className="w-full max-w-lg overflow-hidden rounded-xl border border-borde bg-superficie shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
             <input
@@ -161,7 +161,7 @@ export default function SearchCommand() {
               }}
               onKeyDown={onKeyDown}
               placeholder={t("search.placeholder")}
-              className="w-full border-b border-neutral-200 bg-transparent px-4 py-3 text-base outline-none placeholder:text-neutral-400 dark:border-neutral-700"
+              className="w-full border-b border-borde bg-transparent px-4 py-3 text-base outline-none placeholder:text-suave"
             />
             <ul
               id="search-results"
@@ -170,7 +170,7 @@ export default function SearchCommand() {
               className="max-h-80 overflow-y-auto"
             >
               {query.trim() && results.length === 0 && (
-                <li className="px-4 py-6 text-center text-sm text-neutral-500 dark:text-neutral-400">
+                <li className="px-4 py-6 text-center text-sm text-suave">
                   {t("search.vacio", { query: query.trim() })}
                 </li>
               )}
@@ -187,19 +187,19 @@ export default function SearchCommand() {
                     onClick={() => go(r)}
                     className={`flex cursor-pointer items-baseline justify-between gap-3 px-4 py-2.5 text-sm ${
                       i === active
-                        ? "bg-neutral-100 dark:bg-neutral-800"
+                        ? "bg-lienzo"
                         : ""
                     }`}
                   >
                     <span className="min-w-0">
                       <span className="font-medium">{r.nombre}</span>
                       {context && (
-                        <span className="ml-2 truncate text-neutral-500 dark:text-neutral-400">
+                        <span className="ml-2 truncate text-suave">
                           {context}
                         </span>
                       )}
                     </span>
-                    <span className="shrink-0 text-xs text-neutral-400 dark:text-neutral-500">
+                    <span className="shrink-0 text-xs text-suave">
                       {t(`search.tipo.${r.tipo}` as StringKey)}
                     </span>
                   </li>

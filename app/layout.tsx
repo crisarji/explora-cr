@@ -19,10 +19,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="es">
-      <body className="min-h-screen bg-white text-neutral-900 antialiased dark:bg-neutral-950 dark:text-neutral-100">
+      <body className="min-h-screen bg-lienzo text-tinta antialiased">
         <Header />
         <main className="mx-auto max-w-5xl px-6 py-10">{children}</main>
-        <footer className="border-t border-neutral-200 px-6 py-6 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
+        <footer className="border-t border-borde px-6 py-6 text-center text-sm text-suave">
           <T k="footer.texto" />
         </footer>
         <Analytics />

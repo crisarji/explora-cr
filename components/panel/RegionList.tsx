@@ -33,7 +33,7 @@ export default function RegionList({
 
   return (
     <div className="mt-6">
-      <h2 className="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+      <h2 className="text-sm font-medium text-suave">
         {title}
       </h2>
       <motion.ul
@@ -53,7 +53,7 @@ export default function RegionList({
           <motion.li key={item.codigo} variants={chip}>
             <Link
               href={item.href}
-              className="inline-block rounded-full border border-neutral-200 px-4 py-1.5 text-sm hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500"
+              className="inline-block rounded-full border border-borde px-4 py-1.5 text-sm hover:border-suave"
             >
               {item.nombre}
             </Link>

@@ -32,16 +32,16 @@ import { useT } from "@/lib/i18n";
  * Cantons and districts inherit their province's hue.
  */
 const PROVINCE_FILL: Record<string, string> = {
-  "1": "fill-indigo-300 dark:fill-indigo-600/70", // San José
-  "2": "fill-rose-300 dark:fill-rose-600/70", // Alajuela
-  "3": "fill-amber-300 dark:fill-amber-600/70", // Cartago
-  "4": "fill-emerald-300 dark:fill-emerald-600/70", // Heredia
-  "5": "fill-orange-300 dark:fill-orange-600/70", // Guanacaste
-  "6": "fill-sky-300 dark:fill-sky-600/70", // Puntarenas
-  "7": "fill-violet-300 dark:fill-violet-600/70", // Limón
+  "1": "fill-purple-300 dark:fill-purple-400", // San José
+  "2": "fill-red-300 dark:fill-red-400", // Alajuela
+  "3": "fill-amber-300 dark:fill-amber-400", // Cartago
+  "4": "fill-emerald-300 dark:fill-emerald-400", // Heredia
+  "5": "fill-orange-300 dark:fill-orange-400", // Guanacaste
+  "6": "fill-sky-300 dark:fill-sky-400", // Puntarenas
+  "7": "fill-lime-300 dark:fill-lime-400", // Limón
 };
 
-const STROKE = "stroke-white dark:stroke-neutral-950";
+const STROKE = "stroke-lienzo";
 
 // The border-drawing intro plays once per session, and only when the
 // session starts at the country view (deep links skip straight to their
@@ -49,7 +49,7 @@ const STROKE = "stroke-white dark:stroke-neutral-950";
 let introPlayed = false;
 const EASE = "transition-[opacity,filter,transform] duration-300";
 const FOCUS =
-  "group-focus-visible:stroke-neutral-900 dark:group-focus-visible:stroke-white group-focus-visible:stroke-2";
+  "group-focus-visible:stroke-tinta group-focus-visible:stroke-2";
 
 /**
  * Owns the map SVG — the sole React↔D3 boundary (PLAN.md rule 3).
@@ -207,7 +207,7 @@ export default function MapCanvas() {
 
   const provinceClass = (f: RegionFeature) => {
     const codigo = f.properties.codigo;
-    const fill = PROVINCE_FILL[codigo] ?? "fill-neutral-300";
+    const fill = PROVINCE_FILL[codigo] ?? "fill-borde";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (provincia) {
       // Zoomed in: the active province sits under its cantons; the rest
@@ -225,7 +225,7 @@ export default function MapCanvas() {
     const codigo = f.properties.codigo;
     const fill = provincia
       ? PROVINCE_FILL[provincia.codigo]
-      : "fill-neutral-300";
+      : "fill-borde";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (canton) {
       // The active canton sits under its districts; siblings recede.
@@ -242,7 +242,7 @@ export default function MapCanvas() {
     const codigo = f.properties.codigo;
     const fill = provincia
       ? PROVINCE_FILL[provincia.codigo]
-      : "fill-neutral-300";
+      : "fill-borde";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (distrito) {
       return distrito.codigo === codigo

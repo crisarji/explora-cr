@@ -76,7 +76,7 @@ export default function GeoLayer({
               textAnchor="middle"
               paintOrder="stroke"
               strokeLinejoin="round"
-              className="pointer-events-none select-none fill-neutral-900 stroke-white/80 stroke-[3px] text-sm font-medium dark:fill-white dark:stroke-neutral-950/80"
+              className="pointer-events-none select-none fill-tinta stroke-lienzo/80 stroke-[3px] text-sm font-medium"
             >
               {f.properties.nombre}
             </text>

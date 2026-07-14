@@ -14,7 +14,7 @@ export default function Breadcrumb({ items }: { items: Crumb[] }) {
   return (
     <nav
       aria-label={t("breadcrumb.label")}
-      className="text-sm text-neutral-500 dark:text-neutral-400"
+      className="text-sm text-suave"
     >
       {items.map((item, i) => (
         <span key={`${item.nombre}-${i}`}>
@@ -22,14 +22,14 @@ export default function Breadcrumb({ items }: { items: Crumb[] }) {
           {item.href ? (
             <Link
               href={item.href}
-              className="hover:text-neutral-900 dark:hover:text-white"
+              className="hover:text-tinta"
             >
               {item.nombre}
             </Link>
           ) : (
             <span
               aria-current="page"
-              className="text-neutral-900 dark:text-white"
+              className="text-tinta"
             >
               {item.nombre}
             </span>

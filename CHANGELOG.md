@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format loosely follows 
 
 ## [Unreleased]
 
+### Changed
+- New **"Pura Vida"** palette across the site: warm-sand light mode and a deep ocean-navy dark mode (no more pure black) with fully saturated tropical province fills. All chrome colors now go through semantic tokens (`lienzo`, `superficie`, `borde`, `tinta`, `suave`, `acento`) defined once in `globals.css`; the README map artwork matches.
+
 ### Added
 - Vercel Web Analytics (`@vercel/analytics`) — privacy-friendly, cookie-less page-view counts.
 - Phase 7: "¿Cuál es este cantón?" quiz at `/juego` (10 rounds, 4 same-province choices, bilingual); hand-curated canton fact cards (`data/facts/`, 10 seeded); share button with native share sheet + clipboard fallback; README overhaul with generated province-map SVG artwork.

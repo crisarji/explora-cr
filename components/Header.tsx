@@ -18,7 +18,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="border-b border-neutral-200 px-6 py-4 dark:border-neutral-800">
+    <header className="border-b border-borde px-6 py-4">
       <nav
         aria-label={t("nav.principal")}
         className="mx-auto flex max-w-5xl items-center justify-between gap-4"
@@ -32,19 +32,19 @@ export default function Header() {
             type="button"
             onClick={() => setLang(lang === "es" ? "en" : "es")}
             aria-label={t("lang.cambiar")}
-            className="rounded-md border border-neutral-200 px-2.5 py-1.5 text-sm text-neutral-500 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500"
+            className="rounded-md border border-borde px-2.5 py-1.5 text-sm text-suave hover:border-suave"
           >
             {lang === "es" ? "EN" : "ES"}
           </button>
           <Link
             href="/juego"
-            className="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+            className="text-sm text-suave hover:text-tinta"
           >
             {t("nav.jugar")}
           </Link>
           <Link
             href="/acerca"
-            className="text-sm text-neutral-500 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white"
+            className="text-sm text-suave hover:text-tinta"
           >
             {t("nav.acerca")}
           </Link>

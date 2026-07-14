@@ -74,13 +74,13 @@ export default function Quiz() {
   if (!rounds) {
     return (
       <div className="mx-auto max-w-md text-center">
-        <p className="text-neutral-500 dark:text-neutral-400">
+        <p className="text-suave">
           {t("juego.descripcion")}
         </p>
         <button
           type="button"
           onClick={start}
-          className="mt-6 rounded-lg bg-neutral-900 px-6 py-2.5 font-medium text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+          className="mt-6 rounded-lg bg-acento px-6 py-2.5 font-medium text-acento-tinta hover:bg-acento/90"
         >
           {t("juego.empezar")}
         </button>
@@ -98,7 +98,7 @@ export default function Quiz() {
         <button
           type="button"
           onClick={start}
-          className="mt-6 rounded-lg bg-neutral-900 px-6 py-2.5 font-medium text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+          className="mt-6 rounded-lg bg-acento px-6 py-2.5 font-medium text-acento-tinta hover:bg-acento/90"
         >
           {t("juego.jugarDeNuevo")}
         </button>
@@ -125,7 +125,7 @@ export default function Quiz() {
     const base =
       "rounded-lg border px-4 py-2.5 text-left text-sm font-medium transition-colors";
     if (!answered) {
-      return `${base} border-neutral-200 hover:border-neutral-400 dark:border-neutral-700 dark:hover:border-neutral-500 cursor-pointer`;
+      return `${base} border-borde hover:border-suave cursor-pointer`;
     }
     if (codigo === round.target.codigo) {
       return `${base} border-emerald-500 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400`;
@@ -133,7 +133,7 @@ export default function Quiz() {
     if (codigo === picked) {
       return `${base} border-red-500 bg-red-500/10 text-red-700 dark:text-red-400`;
     }
-    return `${base} border-neutral-200 opacity-50 dark:border-neutral-800`;
+    return `${base} border-borde opacity-50`;
   };
 
   return (
@@ -143,7 +143,7 @@ export default function Quiz() {
         targetCodigo={round.target.codigo}
       />
       <div>
-        <div className="flex items-center justify-between text-sm text-neutral-500 dark:text-neutral-400">
+        <div className="flex items-center justify-between text-sm text-suave">
           <span>
             {t("juego.ronda", { n: current + 1, total: rounds.length })}
           </span>
@@ -183,7 +183,7 @@ export default function Quiz() {
           <button
             type="button"
             onClick={next}
-            className="mt-2 rounded-lg bg-neutral-900 px-5 py-2 text-sm font-medium text-white hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+            className="mt-2 rounded-lg bg-acento px-5 py-2 text-sm font-medium text-acento-tinta hover:bg-acento/90"
           >
             {isLast ? t("juego.verResultado") : t("juego.siguiente")}
           </button>

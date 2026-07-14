@@ -14,9 +14,9 @@ export default function StatsCards({ stats }: { stats: Stat[] }) {
       {stats.map((s) => (
         <div
           key={s.labelKey}
-          className="rounded-lg border border-neutral-200 px-4 py-3 dark:border-neutral-800"
+          className="rounded-lg border border-borde bg-superficie px-4 py-3"
         >
-          <dt className="text-xs text-neutral-500 dark:text-neutral-400">
+          <dt className="text-xs text-suave">
             {t(s.labelKey)}
           </dt>
           <dd className="mt-1 text-lg font-medium">{s.value}</dd>

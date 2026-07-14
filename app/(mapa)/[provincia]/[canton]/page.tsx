@@ -57,7 +57,7 @@ export default async function CantonPage({
         ]}
       />
       <h1 className="mt-4 text-3xl font-medium">{canton.nombre}</h1>
-      <p className="mt-2 text-neutral-500 dark:text-neutral-400">
+      <p className="mt-2 text-suave">
         <T k="canton.intro" params={{ provincia: provincia.nombre }} />
       </p>
       <ShareButton />

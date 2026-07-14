@@ -14,10 +14,10 @@ export default function AcercaPage() {
       <h1 className="text-3xl font-medium">
         <T k="acerca.titulo" />
       </h1>
-      <p className="mt-4 text-neutral-600 dark:text-neutral-300">
+      <p className="mt-4 text-suave">
         <T k="acerca.p1" />
       </p>
-      <p className="mt-4 text-neutral-600 dark:text-neutral-300">
+      <p className="mt-4 text-suave">
         <T k="acerca.p2" />
       </p>
     </section>

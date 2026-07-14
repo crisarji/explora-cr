@@ -31,7 +31,7 @@ export default function ShareButton() {
       type="button"
       onClick={share}
       aria-live="polite"
-      className="mt-3 rounded-md border border-neutral-200 px-3 py-1.5 text-sm text-neutral-500 hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-500"
+      className="mt-3 rounded-md border border-borde px-3 py-1.5 text-sm text-suave hover:border-suave"
     >
       {copied ? t("compartir.copiado") : t("compartir.boton")}
     </button>
