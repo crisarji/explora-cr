@@ -12,14 +12,16 @@ import {
   labelPointOf,
 } from "../lib/geo";
 
+// Kept in sync by hand with lib/provinceColors.ts (Tailwind 300-shade hex
+// values) — see that file for why Heredia uses yellow, not its clubs's red.
 const FILL: Record<string, string> = {
-  "1": "#d8b4fe", // San José — guaria purple
-  "2": "#fca5a5", // Alajuela — macaw red
-  "3": "#fcd34d", // Cartago — mango amber
-  "4": "#6ee7b7", // Heredia — jungle emerald
-  "5": "#fdba74", // Guanacaste — sunset orange
-  "6": "#7dd3fc", // Puntarenas — ocean sky
-  "7": "#bef264", // Limón — lime
+  "1": "#d8b4fe", // San José — Saprissa purple
+  "2": "#fca5a5", // Alajuela — Alajuelense red
+  "3": "#93c5fd", // Cartago — Cartaginés blue
+  "4": "#fcd34d", // Heredia — Herediano yellow
+  "5": "#fde047", // Guanacaste — Mun. Liberia yellow
+  "6": "#fdba74", // Puntarenas — Puntarenas FC orange
+  "7": "#86efac", // Limón — green
 };
 
 const shapes = provinciaFeatures

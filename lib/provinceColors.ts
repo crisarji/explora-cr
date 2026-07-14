@@ -4,13 +4,28 @@
  * paths) and the home-page province chips (`swatch`, a small dot) — same
  * Tailwind color/shade pairing in both, so a chip's dot always matches
  * that province's fill on the map.
+ *
+ * Colors are drawn from each province's flagship football club — the
+ * real, widely-recognized "provincial color" identity in Costa Rica
+ * (stronger than any official government flag). Main/secondary per club:
+ * San José/Saprissa purple+white, Alajuela/Alajuelense red+black,
+ * Cartago/Cartaginés blue+white, Heredia/Herediano red+yellow (from the
+ * province's own flag), Guanacaste/Mun. Liberia yellow+black, Puntarenas
+ * FC orange+black, Limón green+white (by explicit request, overriding
+ * Limón Black Star's black+multicolor kit).
+ *
+ * Alajuela and Heredia's main colors are both red, and the two provinces
+ * border each other — using red for both would make them blur into one
+ * shape on the map. Heredia uses its (equally authentic, flag-sourced)
+ * secondary yellow here instead; Guanacaste's yellow is shifted a shade
+ * so the two don't collide either. All 7 stay visually distinct.
  */
 export const PROVINCE_COLORS: Record<string, { fill: string; swatch: string }> = {
-  "1": { fill: "fill-purple-300 dark:fill-purple-400", swatch: "bg-purple-300 dark:bg-purple-400" }, // San José
-  "2": { fill: "fill-red-300 dark:fill-red-400", swatch: "bg-red-300 dark:bg-red-400" }, // Alajuela
-  "3": { fill: "fill-amber-300 dark:fill-amber-400", swatch: "bg-amber-300 dark:bg-amber-400" }, // Cartago
-  "4": { fill: "fill-emerald-300 dark:fill-emerald-400", swatch: "bg-emerald-300 dark:bg-emerald-400" }, // Heredia
-  "5": { fill: "fill-orange-300 dark:fill-orange-400", swatch: "bg-orange-300 dark:bg-orange-400" }, // Guanacaste
-  "6": { fill: "fill-sky-300 dark:fill-sky-400", swatch: "bg-sky-300 dark:bg-sky-400" }, // Puntarenas
-  "7": { fill: "fill-lime-300 dark:fill-lime-400", swatch: "bg-lime-300 dark:bg-lime-400" }, // Limón
+  "1": { fill: "fill-purple-300 dark:fill-purple-400", swatch: "bg-purple-300 dark:bg-purple-400" }, // San José — Saprissa purple
+  "2": { fill: "fill-red-300 dark:fill-red-400", swatch: "bg-red-300 dark:bg-red-400" }, // Alajuela — Alajuelense red
+  "3": { fill: "fill-blue-300 dark:fill-blue-400", swatch: "bg-blue-300 dark:bg-blue-400" }, // Cartago — Cartaginés blue
+  "4": { fill: "fill-amber-300 dark:fill-amber-400", swatch: "bg-amber-300 dark:bg-amber-400" }, // Heredia — Herediano yellow (secondary; red clashes with Alajuela)
+  "5": { fill: "fill-yellow-300 dark:fill-yellow-400", swatch: "bg-yellow-300 dark:bg-yellow-400" }, // Guanacaste — Mun. Liberia "aurum" yellow
+  "6": { fill: "fill-orange-300 dark:fill-orange-400", swatch: "bg-orange-300 dark:bg-orange-400" }, // Puntarenas — Puntarenas FC orange
+  "7": { fill: "fill-green-300 dark:fill-green-400", swatch: "bg-green-300 dark:bg-green-400" }, // Limón — green (requested; secondary white)
 };

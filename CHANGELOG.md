@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format loosely follows 
 
 ## [Unreleased]
 
+### Changed
+- Province map colors now match each province's real football-club identity (San José/Saprissa purple, Alajuela/Alajuelense red, Cartago/Cartaginés blue, Heredia/Herediano yellow — Alajuela and Heredia's clubs are both red, and the provinces border each other, so Heredia uses its flag-sourced yellow instead — Guanacaste/Mun. Liberia yellow, Puntarenas FC orange, Limón green by request). `lib/provinceColors.ts` documents the reasoning; `docs/mapa.svg` regenerated to match.
+
 ### Added
 - Interactive map gestures: mouse-drag-pan, wheel/trackpad-zoom on desktop, touch pinch/pan on mobile. `zoom.clickDistance` keeps stationary taps passing through to each region's `<Link>` unchanged; `scaleExtent`/`translateExtent`/`extent` (all in the same viewBox-unit space as `lib/geo.ts`) bound how far a manual gesture can drift. Manual pan/zoom is ephemeral — never written to the URL — so any navigation still re-triggers the deterministic `fitTransform` animation. Addresses the mobile-pass follow-up: small cantons/districts are now easy to zoom into by hand instead of relying on precise taps.
 
