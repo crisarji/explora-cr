@@ -19,6 +19,8 @@ import {
   cantonFeatures,
   distritoFeatures,
   zoomBoundsOf,
+  districtColorIndices,
+  distritosOfCanton,
   type RegionFeature,
 } from "@/lib/geo";
 import {
@@ -118,12 +120,7 @@ export default function MapCanvas() {
     [provincia]
   );
   const distritosDeCanton = useMemo(
-    () =>
-      canton
-        ? distritoFeatures.filter(
-            (f) => f.properties.codigoCanton === canton.codigo
-          )
-        : [],
+    () => (canton ? distritosOfCanton(canton.codigo) : []),
     [canton]
   );
   const cantonSlugByCodigo = useMemo(
@@ -133,6 +130,12 @@ export default function MapCanvas() {
   const distritoSlugByCodigo = useMemo(
     () => new Map(canton?.distritos.map((d) => [d.codigo, d.slug]) ?? []),
     [canton]
+  );
+  // Which shade step each district gets — based on which districts actually
+  // share a border (lib/geo.ts), not array order, so neighbors never match.
+  const distritoColorIndex = useMemo(
+    () => districtColorIndices(distritosDeCanton),
+    [distritosDeCanton]
   );
 
   // D3 zoom behavior — created once. Bound live to the <svg> (mouse
@@ -241,9 +244,9 @@ export default function MapCanvas() {
 
   const distritoClass = (f: RegionFeature) => {
     const codigo = f.properties.codigo;
-    const fill = provincia
-      ? PROVINCE_COLORS[provincia.codigo]?.fill
-      : "fill-borde";
+    const shades = provincia && PROVINCE_COLORS[provincia.codigo]?.districtShades;
+    const idx = distritoColorIndex.get(codigo) ?? 0;
+    const fill = shades ? shades[idx % shades.length].fill : "fill-borde";
     const base = `${fill} ${STROKE} ${EASE} ${FOCUS} cursor-pointer`;
     if (distrito) {
       return distrito.codigo === codigo

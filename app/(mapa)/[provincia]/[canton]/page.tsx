@@ -8,7 +8,13 @@ import FactCard from "@/components/panel/FactCard";
 import ShareButton from "@/components/panel/ShareButton";
 import { getCanton, getCabecera, provincias } from "@/lib/divisiones";
 import { getFact } from "@/lib/facts";
-import { getFeature, areaKm2Of } from "@/lib/geo";
+import {
+  getFeature,
+  areaKm2Of,
+  distritosOfCanton,
+  districtColorIndices,
+} from "@/lib/geo";
+import { PROVINCE_COLORS } from "@/lib/provinceColors";
 
 export function generateStaticParams() {
   return provincias.flatMap((p) =>
@@ -46,6 +52,8 @@ export default async function CantonPage({
   const feature = getFeature("canton", canton.codigo);
   const cabecera = getCabecera(canton);
   const fact = getFact(canton.codigo);
+  const shades = PROVINCE_COLORS[provincia.codigo]?.districtShades;
+  const colorIndex = districtColorIndices(distritosOfCanton(canton.codigo));
 
   return (
     <section>
@@ -84,6 +92,7 @@ export default async function CantonPage({
           codigo: d.codigo,
           nombre: d.nombre,
           href: `/${provincia.slug}/${canton.slug}/${d.slug}`,
+          colorSwatch: shades?.[(colorIndex.get(d.codigo) ?? 0) % shades.length].swatch,
         }))}
       />
     </section>

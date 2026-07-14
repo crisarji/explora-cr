@@ -25,6 +25,67 @@ export const provinciaFeatures: RegionFeature[] = toCollection("provincias").fea
 export const cantonFeatures: RegionFeature[] = toCollection("cantones").features;
 export const distritoFeatures: RegionFeature[] = toCollection("distritos").features;
 
+// Arc ids used by each district's geometry, keyed by codigo — lets us
+// detect which districts actually share a border (vs. just cycling colors
+// by array order, which can put bordering districts in the same shade).
+// topojson-client's feature() preserves geometry order 1:1 with the source
+// GeometryCollection, so zipping by index is safe.
+function arcIdsOfGeometry(geom: Objects<RegionProps>["distritos"]["geometries"][number]): Set<number> {
+  const ids = new Set<number>();
+  const addRing = (ring: readonly number[]) => {
+    for (const a of ring) ids.add(a < 0 ? ~a : a);
+  };
+  if (geom.type === "Polygon") {
+    for (const ring of geom.arcs) addRing(ring);
+  } else if (geom.type === "MultiPolygon") {
+    for (const poly of geom.arcs) for (const ring of poly) addRing(ring);
+  }
+  return ids;
+}
+const distritoArcIds: Map<string, Set<number>> = new Map(
+  distritoFeatures.map((f, i) => [
+    f.properties.codigo,
+    arcIdsOfGeometry(topo.objects.distritos.geometries[i]),
+  ])
+);
+function shareArc(a: Set<number>, b: Set<number>): boolean {
+  const [small, big] = a.size < b.size ? [a, b] : [b, a];
+  for (const v of small) if (big.has(v)) return true;
+  return false;
+}
+
+/**
+ * Greedy-colors a set of same-canton districts so no two that share a
+ * border get the same index (a plain "index % shades.length" cycle can't
+ * guarantee that — array order has no relation to geographic adjacency).
+ */
+export function districtColorIndices(features: RegionFeature[]): Map<string, number> {
+  const colorOf = new Map<string, number>();
+  features.forEach((f, i) => {
+    const codigo = f.properties.codigo;
+    const myArcs = distritoArcIds.get(codigo);
+    const usedByNeighbors = new Set<number>();
+    if (myArcs) {
+      for (let j = 0; j < i; j++) {
+        const other = features[j];
+        const otherArcs = distritoArcIds.get(other.properties.codigo);
+        if (otherArcs && shareArc(myArcs, otherArcs)) {
+          usedByNeighbors.add(colorOf.get(other.properties.codigo)!);
+        }
+      }
+    }
+    let color = 0;
+    while (usedByNeighbors.has(color)) color++;
+    colorOf.set(codigo, color);
+  });
+  return colorOf;
+}
+
+/** A canton's district features, in the stable order districtColorIndices relies on. */
+export function distritosOfCanton(cantonCodigo: string): RegionFeature[] {
+  return distritoFeatures.filter((f) => f.properties.codigoCanton === cantonCodigo);
+}
+
 // The SVG coordinate space. Costa Rica's mainland is wider than tall.
 export const MAP_WIDTH = 960;
 export const MAP_HEIGHT = 640;

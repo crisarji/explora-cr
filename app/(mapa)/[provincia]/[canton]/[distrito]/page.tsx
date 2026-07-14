@@ -6,7 +6,13 @@ import RegionList from "@/components/panel/RegionList";
 import T from "@/components/T";
 import ShareButton from "@/components/panel/ShareButton";
 import { getDistrito, getCabecera, provincias } from "@/lib/divisiones";
-import { getFeature, areaKm2Of } from "@/lib/geo";
+import {
+  getFeature,
+  areaKm2Of,
+  distritosOfCanton,
+  districtColorIndices,
+} from "@/lib/geo";
+import { PROVINCE_COLORS } from "@/lib/provinceColors";
 
 export function generateStaticParams() {
   return provincias.flatMap((p) =>
@@ -50,6 +56,8 @@ export default async function DistritoPage({
 
   const feature = getFeature("distrito", distrito.codigo);
   const esCabecera = getCabecera(canton)?.codigo === distrito.codigo;
+  const shades = PROVINCE_COLORS[provincia.codigo]?.districtShades;
+  const colorIndex = districtColorIndices(distritosOfCanton(canton.codigo));
 
   return (
     <section>
@@ -94,6 +102,7 @@ export default async function DistritoPage({
             codigo: d.codigo,
             nombre: d.nombre,
             href: `/${provincia.slug}/${canton.slug}/${d.slug}`,
+            colorSwatch: shades?.[(colorIndex.get(d.codigo) ?? 0) % shades.length].swatch,
           }))}
       />
     </section>
