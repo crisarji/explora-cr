@@ -45,11 +45,29 @@ function contextOf(entry: RegionEntry): string | null {
   return null;
 }
 
+function MagnifierIcon() {
+  return (
+    <svg
+      width="15"
+      height="15"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2.4"
+      aria-hidden="true"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <path d="m20 20-3.5-3.5" />
+    </svg>
+  );
+}
+
 /**
- * Cmd+K fuzzy search over all 585 regions. Selecting a result just
+ * Ctrl/⌘+K fuzzy search over all 585 regions. Selecting a result just
  * router.pushes its URL — the URL-driven camera does the flying.
+ * `iconOnly` renders the compact trigger used inside the header capsule.
  */
-export default function SearchCommand() {
+export default function SearchCommand({ iconOnly = false }: { iconOnly?: boolean }) {
   const router = useRouter();
   const t = useT();
   const [open, setOpen] = useState(false);
@@ -132,17 +150,29 @@ export default function SearchCommand() {
 
   return (
     <>
-      <button
-        type="button"
-        onClick={() => setOpen(true)}
-        className="flex items-center gap-2 rounded-md border border-borde px-3 py-1.5 text-sm text-suave hover:border-suave"
-        aria-label={t("search.titulo")}
-      >
-        <span>{t("search.abrir")}</span>
-        <kbd className="rounded border border-borde px-1.5 py-0.5 text-[10px] text-suave">
-          {shortcut}
-        </kbd>
-      </button>
+      {iconOnly ? (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          aria-label={`${t("search.titulo")} (${shortcut})`}
+          title={`${t("search.titulo")} — ${shortcut}`}
+          className="flex h-9 w-10 items-center justify-center text-suave hover:bg-superficie hover:text-tinta"
+        >
+          <MagnifierIcon />
+        </button>
+      ) : (
+        <button
+          type="button"
+          onClick={() => setOpen(true)}
+          className="flex items-center gap-2 rounded-md border border-borde px-3 py-1.5 text-sm text-suave hover:border-suave"
+          aria-label={t("search.titulo")}
+        >
+          <span>{t("search.abrir")}</span>
+          <kbd className="rounded border border-borde px-1.5 py-0.5 text-[10px] text-suave">
+            {shortcut}
+          </kbd>
+        </button>
+      )}
 
       {open && (
         <div
@@ -156,23 +186,28 @@ export default function SearchCommand() {
             className="w-full max-w-lg overflow-hidden rounded-xl border border-borde bg-superficie shadow-2xl"
             onClick={(e) => e.stopPropagation()}
           >
-            <input
-              ref={inputRef}
-              role="combobox"
-              aria-expanded={results.length > 0}
-              aria-controls="search-results"
-              aria-activedescendant={
-                results[active] ? `search-opt-${results[active].codigo}` : undefined
-              }
-              value={query}
-              onChange={(e) => {
-                setQuery(e.target.value);
-                setActive(0);
-              }}
-              onKeyDown={onKeyDown}
-              placeholder={t("search.placeholder")}
-              className="w-full border-b border-borde bg-transparent px-4 py-3 text-base outline-none placeholder:text-suave"
-            />
+            <div className="flex items-center border-b border-borde">
+              <input
+                ref={inputRef}
+                role="combobox"
+                aria-expanded={results.length > 0}
+                aria-controls="search-results"
+                aria-activedescendant={
+                  results[active] ? `search-opt-${results[active].codigo}` : undefined
+                }
+                value={query}
+                onChange={(e) => {
+                  setQuery(e.target.value);
+                  setActive(0);
+                }}
+                onKeyDown={onKeyDown}
+                placeholder={t("search.placeholder")}
+                className="w-full bg-transparent px-4 py-3 text-base outline-none placeholder:text-suave"
+              />
+              <kbd className="mr-3 hidden shrink-0 rounded border border-borde px-1.5 py-0.5 text-[10px] text-suave sm:block">
+                {shortcut}
+              </kbd>
+            </div>
             <ul
               id="search-results"
               role="listbox"

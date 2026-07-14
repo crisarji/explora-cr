@@ -5,6 +5,9 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Changed
+- Header redesigned: Costa Rican flag ribbon + brand dot, segmented Mapa/Jugar/Acerca navigation showing the active section, and a tools capsule (search, language, theme). Search shortcut label is platform-aware (Ctrl K / ⌘K).
+- Breadcrumb redesigned as clickable chips: ancestors read as buttons (border, hover lift, home icon on the root), current level is a solid accent chip — clicking a chip zooms the map back out to that level.
+- Dark/light mode is now an explicit header toggle persisted per visitor (system preference only seeds the first visit).
 - New **"Pura Vida"** palette across the site: warm-sand light mode and a deep ocean-navy dark mode (no more pure black) with fully saturated tropical province fills. All chrome colors now go through semantic tokens (`lienzo`, `superficie`, `borde`, `tinta`, `suave`, `acento`) defined once in `globals.css`; the README map artwork matches.
 
 ### Added

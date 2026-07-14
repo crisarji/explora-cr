@@ -13,6 +13,7 @@ const STRINGS = {
     "nav.acerca": "Acerca",
     "nav.principal": "Principal",
     "nav.jugar": "Jugar",
+    "nav.mapa": "Mapa",
     "juego.titulo": "¿Cuál es este cantón?",
     "juego.descripcion":
       "Pon a prueba cuánto conocés los 84 cantones de Costa Rica: 10 rondas, 4 opciones.",
@@ -73,6 +74,7 @@ const STRINGS = {
     "nav.acerca": "About",
     "nav.principal": "Main",
     "nav.jugar": "Play",
+    "nav.mapa": "Map",
     "juego.titulo": "Which canton is this?",
     "juego.descripcion":
       "Test how well you know Costa Rica's 84 cantons: 10 rounds, 4 choices.",
