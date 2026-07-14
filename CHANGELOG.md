@@ -4,6 +4,9 @@ All notable changes to this project are documented here. Format loosely follows 
 
 ## [Unreleased]
 
+### Added
+- Interactive map gestures: mouse-drag-pan, wheel/trackpad-zoom on desktop, touch pinch/pan on mobile. `zoom.clickDistance` keeps stationary taps passing through to each region's `<Link>` unchanged; `scaleExtent`/`translateExtent`/`extent` (all in the same viewBox-unit space as `lib/geo.ts`) bound how far a manual gesture can drift. Manual pan/zoom is ephemeral — never written to the URL — so any navigation still re-triggers the deterministic `fitTransform` animation. Addresses the mobile-pass follow-up: small cantons/districts are now easy to zoom into by hand instead of relying on precise taps.
+
 ### Changed
 - Mobile pass on the header: the segmented nav and tools capsule (search/language/theme) were unreachable off-screen below ~480px width. Replaced with a compact bar (brand + search icon + hamburger) that expands into a full-width menu with stacked nav links and lang/theme buttons; closes automatically on navigation. Desktop layout (Header B) is untouched — the collapse only triggers below the `md` breakpoint.
 - Stats cards are always 3 columns (was 2 on mobile, leaving an orphaned third card on its own row).

@@ -7,7 +7,11 @@ import { zoom, zoomIdentity, type ZoomBehavior } from "d3-zoom";
 import "d3-transition";
 import GeoLayer from "@/components/map/GeoLayer";
 import HoverTooltip from "@/components/map/HoverTooltip";
-import { fitTransform, zoomDuration } from "@/components/map/ZoomController";
+import {
+  fitTransform,
+  zoomDuration,
+  configureInteractiveZoom,
+} from "@/components/map/ZoomController";
 import {
   MAP_WIDTH,
   MAP_HEIGHT,
@@ -131,12 +135,23 @@ export default function MapCanvas() {
     [canton]
   );
 
-  // D3 zoom behavior — created once, used programmatically only.
+  // D3 zoom behavior — created once. Bound live to the <svg> (mouse
+  // drag, wheel, touch pinch/pan) as well as driven programmatically by
+  // the route-change effect below; a small clickDistance keeps a
+  // stationary tap/click passing through to each region's <Link> instead
+  // of being swallowed as a drag.
   useEffect(() => {
+    const svg = select(svgRef.current!);
     const g = select(gRef.current!);
-    zoomRef.current = zoom<SVGSVGElement, unknown>().on("zoom", (event) =>
+    const zoomBehavior = zoom<SVGSVGElement, unknown>().on("zoom", (event) =>
       g.attr("transform", event.transform.toString())
     );
+    configureInteractiveZoom(zoomBehavior);
+    svg.call(zoomBehavior);
+    zoomRef.current = zoomBehavior;
+    return () => {
+      svg.on(".zoom", null);
+    };
   }, []);
 
   // Route change → zoom-to-bounds transition.
@@ -266,7 +281,7 @@ export default function MapCanvas() {
         viewBox={`0 0 ${MAP_WIDTH} ${MAP_HEIGHT}`}
         role="img"
         aria-label={ariaLabel}
-        className="h-auto w-full"
+        className="h-auto w-full touch-none"
       >
         <rect
           width={MAP_WIDTH}

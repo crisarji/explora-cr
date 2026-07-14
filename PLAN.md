@@ -110,7 +110,7 @@ explora-cr/
 
 1. **URL is the only source of truth for selection.** MapCanvas and SidePanel both derive from route params — they can never drift apart.
 2. **Zustand holds only ephemeral UI state** (hovered region, animation-in-flight). Nothing persistent.
-3. **React owns lifecycle, D3 owns the SVG internals.** D3 manipulates paths/transforms inside `useEffect` in MapCanvas; React never re-renders individual paths during a D3 transition.
+3. **React owns lifecycle, D3 owns the SVG internals.** D3 manipulates paths/transforms inside `useEffect` in MapCanvas; React never re-renders individual paths during a D3 transition. The zoom behavior is both driven programmatically (route changes → `fitTransform` animations) and bound live to the `<svg>` for interactive mouse-drag/wheel/touch pinch-pan (`zoom.clickDistance` keeps a stationary tap passing through to each region's `<Link>` instead of being swallowed as a drag). Manual pan/zoom is ephemeral — never written to the URL — and any navigation re-triggers the deterministic fit animation from wherever the camera currently sits.
 4. **GeoLayer is written once, rendered three times** with different data/styles — drill-down logic stays uniform.
 5. **Only mount district paths for the active canton** — never all ~490 at once.
 
