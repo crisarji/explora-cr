@@ -12,6 +12,11 @@ interface GeoLayerProps {
   onHoverStart?: (f: RegionFeature, e: React.MouseEvent) => void;
   onHoverMove?: (e: React.MouseEvent) => void;
   onHoverEnd?: () => void;
+  /**
+   * Animation hook for the layer <g> ("map-intro", "geo-reveal" — see
+   * globals.css). Paths carry a --geo-i index for staggered delays.
+   */
+  className?: string;
 }
 
 /**
@@ -26,15 +31,18 @@ export default function GeoLayer({
   onHoverStart,
   onHoverMove,
   onHoverEnd,
+  className,
 }: GeoLayerProps) {
   return (
-    <g>
-      {features.map((f) => {
+    <g className={className}>
+      {features.map((f, i) => {
         const shape = (
           <path
             key={f.properties.codigo}
             d={pathOf(f)}
+            pathLength={1}
             vectorEffect="non-scaling-stroke"
+            style={{ "--geo-i": i } as React.CSSProperties}
             className={featureClass(f)}
             onMouseEnter={onHoverStart ? (e) => onHoverStart(f, e) : undefined}
             onMouseMove={onHoverMove}

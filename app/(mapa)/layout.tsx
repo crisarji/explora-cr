@@ -1,4 +1,5 @@
 import MapCanvas from "@/components/map/MapCanvas";
+import PanelTransition from "@/components/panel/PanelTransition";
 
 /**
  * Shared layout for all map views (country → province → canton). The map
@@ -11,7 +12,9 @@ export default function MapaLayout({
   return (
     <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,3fr)_minmax(0,2fr)]">
       <MapCanvas />
-      <div className="min-w-0">{children}</div>
+      <div className="min-w-0">
+        <PanelTransition>{children}</PanelTransition>
+      </div>
     </div>
   );
 }

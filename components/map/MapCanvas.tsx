@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { select } from "d3-selection";
 import { zoom, zoomIdentity, type ZoomBehavior } from "d3-zoom";
@@ -41,6 +41,11 @@ const PROVINCE_FILL: Record<string, string> = {
 };
 
 const STROKE = "stroke-white dark:stroke-neutral-950";
+
+// The border-drawing intro plays once per session, and only when the
+// session starts at the country view (deep links skip straight to their
+// zoom). Module-level so route changes don't replay it.
+let introPlayed = false;
 const EASE = "transition-[opacity,filter,transform] duration-300";
 const FOCUS =
   "group-focus-visible:stroke-neutral-900 dark:group-focus-visible:stroke-white group-focus-visible:stroke-2";
@@ -60,6 +65,8 @@ export default function MapCanvas() {
   const gRef = useRef<SVGGElement>(null);
   const zoomRef = useRef<ZoomBehavior<SVGSVGElement, unknown> | null>(null);
 
+  const [showIntro, setShowIntro] = useState(false);
+
   const hoveredCodigo = useUIStore((s) => s.hovered?.codigo ?? null);
   const setHovered = useUIStore((s) => s.setHovered);
   const setTooltip = useUIStore((s) => s.setTooltip);
@@ -68,6 +75,20 @@ export default function MapCanvas() {
   // URL → active regions. The URL is the only source of truth for selection.
   const [provSlug, cantonSlug, distritoSlug] = pathname.split("/").filter(Boolean);
   const provincia = provSlug ? getProvincia(provSlug) : undefined;
+
+  // Intro decision happens after hydration (server HTML must not carry the
+  // class — the export worker renders pages in arbitrary order).
+  useEffect(() => {
+    if (!introPlayed && !provincia) {
+      introPlayed = true;
+      // Post-hydration setState is the point: the class must differ from
+      // the server HTML only after React has taken over.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setShowIntro(true);
+    }
+    // Run once at mount: the intro belongs to the session's first view only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const canton =
     provincia && cantonSlug ? getCanton(provSlug, cantonSlug)?.canton : undefined;
   const distrito =
@@ -276,9 +297,11 @@ export default function MapCanvas() {
             onHoverStart={hoverProvincia}
             onHoverMove={moveTooltip}
             onHoverEnd={endHover}
+            className={showIntro ? "map-intro" : undefined}
           />
           {provincia && (
             <GeoLayer
+              key={provincia.codigo}
               features={cantonesDeProvincia}
               featureClass={cantonClass}
               hrefOf={(f) =>
@@ -287,10 +310,12 @@ export default function MapCanvas() {
               onHoverStart={hoverCanton}
               onHoverMove={moveTooltip}
               onHoverEnd={endHover}
+              className="geo-reveal"
             />
           )}
           {provincia && canton && (
             <GeoLayer
+              key={canton.codigo}
               features={distritosDeCanton}
               featureClass={distritoClass}
               hrefOf={(f) =>
@@ -299,6 +324,7 @@ export default function MapCanvas() {
               onHoverStart={hoverDistrito}
               onHoverMove={moveTooltip}
               onHoverEnd={endHover}
+              className="geo-reveal"
             />
           )}
         </g>

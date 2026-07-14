@@ -175,11 +175,11 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 **Learning:** static generation at scale, data-driven rendering, performance.
 
 ### Phase 5 — Animation polish _(1–2 weeks — the fun one)_
-- [ ] Intro border-drawing animation
-- [ ] Staggered child reveals after zoom
-- [ ] Motion transitions for SidePanel and page changes
-- [ ] Color/level transitions, easing tuning
-- [ ] `prefers-reduced-motion` fallbacks
+- [x] Intro border-drawing animation (once per session, country view only; deep links skip it)
+- [x] Staggered child reveals after zoom (CSS `--geo-i` delays, `backwards` fill so hover/dim classes take over afterwards)
+- [x] Motion transitions for side panel page changes + staggered RegionList chips (enter-only — App Router swaps children immediately, so exit animations aren't reliable)
+- [x] Color/level transitions, easing tuning (CSS transitions on fill/opacity/filter; d3 default cubic easing kept)
+- [x] `prefers-reduced-motion` fallbacks (zoom duration 0, CSS animations off, Motion via `useReducedMotion`)
 
 **Learning:** Motion, animation choreography, motion accessibility.
 
