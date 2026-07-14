@@ -5,6 +5,7 @@ All notable changes to this project are documented here. Format loosely follows 
 ## [Unreleased]
 
 ### Added
+- Vercel Web Analytics (`@vercel/analytics`) — privacy-friendly, cookie-less page-view counts.
 - Phase 7: "¿Cuál es este cantón?" quiz at `/juego` (10 rounds, 4 same-province choices, bilingual); hand-curated canton fact cards (`data/facts/`, 10 seeded); share button with native share sheet + clipboard fallback; README overhaul with generated province-map SVG artwork.
 - Phase 6: Cmd+K fuzzy search over all 585 regions (Fuse.js, accent-insensitive, combobox a11y pattern) that flies the camera to the selected region; ES/EN language toggle (client-side dictionary, persisted, ES default); per-page metadata with hierarchical titles and canonical URLs; accessibility pass (labeled navs/regions, focus restore, `aria-current`).
 - Phase 5 animation polish: first-load intro where province borders draw themselves in (`pathLength`/`stroke-dashoffset`), staggered canton/district reveals after the zoom lands, Motion fade/slide for side-panel page changes, and staggered region-chip lists. All animations respect `prefers-reduced-motion`.

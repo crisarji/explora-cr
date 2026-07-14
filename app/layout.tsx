@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import Header from "@/components/Header";
 import T from "@/components/T";
 import "./globals.css";
@@ -24,6 +25,7 @@ export default function RootLayout({
         <footer className="border-t border-neutral-200 px-6 py-6 text-center text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">
           <T k="footer.texto" />
         </footer>
+        <Analytics />
       </body>
     </html>
   );
