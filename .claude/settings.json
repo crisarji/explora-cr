@@ -1,0 +1,16 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node scripts/check-deps.mjs 2>/dev/null",
+            "timeout": 25,
+            "statusMessage": "Checking dependency health…"
+          }
+        ]
+      }
+    ]
+  }
+}

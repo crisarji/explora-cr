@@ -194,7 +194,7 @@ Respect `prefers-reduced-motion`: swap all of the above for simple fades.
 ### Phase 7 — Extras _(open-ended)_
 - [x] Canton fact cards (`data/facts/` — hand-curated, 10 of 84 cantons seeded; see data/facts/README.md)
 - [x] "Guess the canton" quiz mode at `/juego` — 10 rounds, 4 same-province choices, bilingual
-- [x] Share button (native share sheet / clipboard fallback, no third-party scripts). _Analytics pending: needs an account decision (Plausible/Umami/none)._
+- [x] Share button (native share sheet / clipboard fallback, no third-party scripts). Analytics: `@vercel/analytics` wired in `app/layout.tsx`.
 - [x] README with generated map artwork (`scripts/render-map-svg.mts` → docs/mapa.svg) + MIT license
 
 ---
