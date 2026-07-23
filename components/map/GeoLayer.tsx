@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { pathOf, labelPointOf, type RegionFeature } from "@/lib/geo";
 
 interface GeoLayerProps {
@@ -33,6 +34,8 @@ export default function GeoLayer({
   onHoverEnd,
   className,
 }: GeoLayerProps) {
+  const router = useRouter();
+
   return (
     <g className={className}>
       {features.map((f, i) => {
@@ -52,12 +55,23 @@ export default function GeoLayer({
             {!onHoverStart && <title>{f.properties.nombre}</title>}
           </path>
         );
-        return hrefOf ? (
+        const href = hrefOf?.(f);
+        return href ? (
           <Link
             key={f.properties.codigo}
-            href={hrefOf(f)}
+            href={href}
             aria-label={f.properties.nombre}
             className="group outline-none"
+            // Browser support for keyboard-activating an SVG <a> is
+            // inconsistent (confirmed: focus works, native Enter/Space
+            // navigation does not) — trigger the route change explicitly
+            // rather than rely on default anchor behavior inside <svg>.
+            onKeyDown={(e) => {
+              if (e.key === "Enter") {
+                e.preventDefault();
+                router.push(href);
+              }
+            }}
           >
             {shape}
           </Link>

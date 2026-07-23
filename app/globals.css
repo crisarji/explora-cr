@@ -12,7 +12,7 @@
   --borde: #e8e0ce;
   --tinta: #27303a; /* primary text */
   --suave: #68737d; /* muted text */
-  --acento: #0d9488; /* teal */
+  --acento: #0b756c; /* teal — darkened from #0d9488 for 4.5:1 text contrast (WCAG AA) */
   --acento-tinta: #ffffff; /* text on accent */
 }
 /* The theme is an explicit choice: a pre-paint script in the root layout
