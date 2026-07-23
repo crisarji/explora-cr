@@ -41,18 +41,18 @@ source, zero hosting cost.
 ## Getting started
 
 ```bash
-npm install
-npm run dev        # http://localhost:3000
+pnpm install
+pnpm run dev        # http://localhost:3000
 ```
 
 Other commands:
 
 ```bash
-npm run build       # static export (out/)
-npm run lint         # eslint
-npm run validate      # data-integrity checks (counts, slugs, topo consistency)
-npm run build:topo     # regenerate all data from the IGN WFS source
-npx tsx scripts/render-map-svg.mts   # regenerate docs/mapa.svg
+pnpm run build       # static export (out/)
+pnpm run lint         # eslint
+pnpm run validate      # data-integrity checks (counts, slugs, topo consistency)
+pnpm run build:topo     # regenerate all data from the IGN WFS source
+pnpm exec tsx scripts/render-map-svg.mts   # regenerate docs/mapa.svg
 ```
 
 ## Architecture in one paragraph

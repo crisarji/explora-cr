@@ -11,16 +11,16 @@ The project is currently in **Phase 0 (skeleton)**. Check the `- [ ]` checklist 
 ## Setup
 
 ```bash
-npm install
-npm run dev        # http://localhost:3000
+pnpm install
+pnpm run dev        # http://localhost:3000
 ```
 
 ## Before submitting a change
 
 ```bash
-npm run lint
-npm run validate    # asserts province/canton/district counts against the data layer
-npm run build        # confirms the static export still builds
+pnpm run lint
+pnpm run validate    # asserts province/canton/district counts against the data layer
+pnpm run build        # confirms the static export still builds
 ```
 
 ## Data contributions
@@ -35,7 +35,7 @@ Costa Rica's territorial division counts vary slightly by source (see PLAN.md §
 
 - Keep PRs scoped to one phase/feature where possible — this makes review easier against the PLAN.md checklist.
 - Update PLAN.md's checklist and this repo's docs if your change completes or alters a planned item.
-- Describe what you tested (dev server, `npm run validate`, build) in the PR description.
+- Describe what you tested (dev server, `pnpm run validate`, build) in the PR description.
 
 ## Code of conduct
 

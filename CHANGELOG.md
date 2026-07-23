@@ -4,6 +4,10 @@ All notable changes to this project are documented here. Format loosely follows 
 
 ## [Unreleased]
 
+### Changed
+- Switched package manager from npm to pnpm: `package-lock.json` replaced by `pnpm-lock.yaml`, `packageManager` field pins the exact pnpm version, all docs/scripts updated to `pnpm run …`. All dependency versions in `package.json` are now exact-pinned (no `^` ranges) at their currently-resolved versions.
+- Added `scripts/check-deps.mjs` + a `SessionStart` hook (`.claude/settings.json`): every new session now surfaces a dependency-freshness report (outdated packages by semver bump, cross-referenced against `pnpm audit` advisories, each with an update recommendation), cached for 6h to avoid re-hitting the registry every session start.
+
 ### Fixed
 - Guanacaste and Heredia's map fills were both Tailwind pastel yellow (measured 1.09:1 WCAG contrast — imperceptible), flagged during a mobile-viewport check. Guanacaste no longer uses a yellow/gold at all — it's not actually tied to a football club the way the other provinces are, so it now draws from its own real provincial flag (adopted 1974) instead: `lime-300`/`400`, the flag's "verdor de la pampa" (savanna green), distinct from both Heredia's yellow and Limón's true green. Verified across all 21 province-pair combinations in both themes; Guanacaste's closest neighbor is now 83 (light) / 111 (dark) Euclidean RGB distance, comfortably clear.
 
@@ -47,8 +51,8 @@ All notable changes to this project are documented here. Format loosely follows 
 - `lib/geo.ts`: TopoJSON→GeoJSON features, Mercator projection fitted to mainland bounds (Isla del Coco excluded from the fit), path/centroid/bounds helpers.
 - Dark-mode palette across the app shell and map.
 - `/prototipo`: throwaway zoom-to-bounds prototype (d3-zoom) that de-risks the Phase 3 interaction core — click a province to zoom in and reveal its cantons.
-- ESLint flat config (`eslint.config.mjs`); `npm run lint` now runs the ESLint CLI (`next lint` is deprecated in Next 16).
-- Phase 1 data pipeline (`npm run build:topo`): downloads official IGN SNIT WFS district boundaries (versión 20260410001), simplifies with mapshaper, dissolves districts → cantons → provinces into a single 445 KB `data/geo/costa-rica.topo.json` with three arc-sharing layers.
+- ESLint flat config (`eslint.config.mjs`); `pnpm run lint` now runs the ESLint CLI (`next lint` is deprecated in Next 16).
+- Phase 1 data pipeline (`pnpm run build:topo`): downloads official IGN SNIT WFS district boundaries (versión 20260410001), simplifies with mapshaper, dissolves districts → cantons → provinces into a single 445 KB `data/geo/costa-rica.topo.json` with three arc-sharing layers.
 - Full hierarchy data: `data/divisiones.json` (7 provincias / 84 cantones / 494 distritos with accent-safe slugs) and `data/slugs.json` (flat region index with URL paths, future search index).
 - Canton pages now list their districts; district data exposed via `getDistrito` in `lib/divisiones.ts`.
 - `scripts/validate.ts` hardened: asserts counts, globally unique codes, scope-unique slugs, topo/hierarchy consistency, and the < 500 KB topo size budget.

@@ -3,7 +3,7 @@
   "configurations": [
     {
       "name": "explora-cr",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000
     }

@@ -9,7 +9,7 @@ Rules for adding facts:
   against a reliable source (the canton's municipality, national press,
   UNESCO, etc.).
 - Keep each fact to one sentence; both languages required.
-- This file is NOT produced by `npm run build:topo` — it survives data
+- This file is NOT produced by `pnpm run build:topo` — it survives data
   regeneration.
 
 Coverage so far: 10 of 84 cantons. Contributions welcome.

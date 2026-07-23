@@ -11,21 +11,21 @@ The project has completed **Phases 0–5** (data pipeline, static map, interacti
 ## Commands
 
 ```bash
-npm run dev        # start dev server (http://localhost:3000)
-npm run build       # static export build (output: "export" in next.config.ts)
-npm run start        # serve the production build
-npm run lint          # eslint . (flat config in eslint.config.mjs)
-npm run build:topo     # regenerate all data files from the IGN WFS source (scripts/build-topo.mts)
-npm run validate        # data-integrity checks: counts, unique codes/slugs, topo consistency, size budget
+pnpm run dev        # start dev server (http://localhost:3000)
+pnpm run build       # static export build (output: "export" in next.config.ts)
+pnpm run start        # serve the production build
+pnpm run lint          # eslint . (flat config in eslint.config.mjs)
+pnpm run build:topo     # regenerate all data files from the IGN WFS source (scripts/build-topo.mts)
+pnpm run validate        # data-integrity checks: counts, unique codes/slugs, topo consistency, size budget
 ```
 
-There is no test runner configured yet. `npm run validate` is the closest thing to a test suite — run it after touching anything under `data/` or `lib/divisiones.ts`.
+There is no test runner configured yet. `pnpm run validate` is the closest thing to a test suite — run it after touching anything under `data/` or `lib/divisiones.ts`.
 
 ## Architecture
 
 **Routing is state.** Every view is a URL, statically generated via `generateStaticParams`: `/` (country) → `/[provincia]` → `/[provincia]/[canton]` → `/[provincia]/[canton]/[distrito]` (~585 pages). There is no client-side selection state that isn't reflected in the route — page components derive everything from `params`, and the map camera is driven exclusively by route changes: click → `router.push` → zoom-to-bounds effect, so clicks, breadcrumbs, back button, and direct links all animate through one code path. The map pages live in the `app/(mapa)/` route group whose layout mounts `MapCanvas` once so it persists (and animates) across navigations.
 
-**Data layer:** `data/divisiones.json` (full hierarchy: 7 provincias / 84 cantones / 494 distritos, with accent-safe slugs), `data/slugs.json` (flat region index with URL paths), and `data/geo/costa-rica.topo.json` (three TopoJSON layers — provincias/cantones/distritos — that share arcs because cantons and provinces are dissolved from the district geometry) are all **generated files**. Never hand-edit them; regenerate with `npm run build:topo`, which downloads the official IGN SNIT WFS district layer (cached in the gitignored `data/geo/raw/`), simplifies with mapshaper, and derives everything from that single source (see [scripts/fetch-geo.md](scripts/fetch-geo.md)). `lib/divisiones.ts` exposes the hierarchy plus lookup helpers `getProvincia` / `getCanton` / `getDistrito`.
+**Data layer:** `data/divisiones.json` (full hierarchy: 7 provincias / 84 cantones / 494 distritos, with accent-safe slugs), `data/slugs.json` (flat region index with URL paths), and `data/geo/costa-rica.topo.json` (three TopoJSON layers — provincias/cantones/distritos — that share arcs because cantons and provinces are dissolved from the district geometry) are all **generated files**. Never hand-edit them; regenerate with `pnpm run build:topo`, which downloads the official IGN SNIT WFS district layer (cached in the gitignored `data/geo/raw/`), simplifies with mapshaper, and derives everything from that single source (see [scripts/fetch-geo.md](scripts/fetch-geo.md)). `lib/divisiones.ts` exposes the hierarchy plus lookup helpers `getProvincia` / `getCanton` / `getDistrito`.
 
 **Static export target:** `next.config.ts` sets `output: "export"`, so this must stay a fully static site — no server components that require a runtime, no API routes, no dynamic (non-generateStaticParams) rendering.
 

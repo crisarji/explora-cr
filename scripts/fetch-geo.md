@@ -17,7 +17,7 @@ The IGN district layer carries the full hierarchy in its properties
 (`CÓDIGO_DTA`, `DISTRITO`, `CÓDIGO_CANTÓN`, `CANTÓN`, `CÓDIGO_PROVINCIA`,
 `PROVINCIA`), so both geometry and `divisiones.json` derive from this one layer.
 
-## Pipeline (`npm run build:topo` → scripts/build-topo.mts)
+## Pipeline (`pnpm run build:topo` → scripts/build-topo.mts)
 
 1. Download the district layer as GeoJSON (EPSG:4326) → `data/geo/raw/`
    (~60 MB, gitignored, cached — delete to force re-download).
@@ -26,5 +26,5 @@ The IGN district layer carries the full hierarchy in its properties
 4. Emit `data/geo/costa-rica.topo.json` (3 layers, 445 KB).
 5. Emit `data/divisiones.json` (hierarchy + slugs) and `data/slugs.json`
    (flat region index with URL paths, feeds Phase 6 search).
-6. `npm run validate` asserts counts, unique codes, scope-unique slugs,
+6. `pnpm run validate` asserts counts, unique codes, scope-unique slugs,
    topo/hierarchy consistency, and the < 500 KB size budget.
