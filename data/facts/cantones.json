@@ -3,6 +3,22 @@
     "es": "Este cantón alberga la ciudad de San José, capital de Costa Rica desde 1823.",
     "en": "This canton is home to the city of San José, Costa Rica's capital since 1823."
   },
+  "102": {
+    "es": "Escazú es conocido como «la Ciudad de las Brujas» por sus leyendas coloniales de brujería.",
+    "en": "Escazú is known as “the City of Witches” for its colonial-era witchcraft legends."
+  },
+  "114": {
+    "es": "Moravia es considerada la cuna de la talabartería y la marroquinería costarricenses, un oficio con más de un siglo de tradición.",
+    "en": "Moravia is considered the cradle of Costa Rican leatherworking, a craft with more than a century of tradition."
+  },
+  "119": {
+    "es": "Pérez Zeledón es el cantón más extenso de la provincia de San José y lleva el nombre del jurista y diplomático Pedro Pérez Zeledón.",
+    "en": "Pérez Zeledón is San José province's largest canton, named after jurist and diplomat Pedro Pérez Zeledón."
+  },
+  "201": {
+    "es": "Alajuela es cuna del héroe nacional Juan Santamaría, nacido en este cantón en 1831; el aeropuerto internacional del país lleva su nombre.",
+    "en": "Alajuela is the birthplace of national hero Juan Santamaría, born here in 1831; the country's international airport bears his name."
+  },
   "202": {
     "es": "San Ramón es conocido como la «tierra de poetas» por la cantidad de escritores y poetas que ha dado al país.",
     "en": "San Ramón is known as the “land of poets” for the many writers and poets it has given the country."
@@ -11,9 +27,25 @@
     "es": "Su iglesia metálica de color rojo, fabricada en Bélgica a finales del siglo XIX, es uno de los templos más singulares de América Latina.",
     "en": "Its red metal church, manufactured in Belgium in the late 19th century, is one of the most unusual temples in Latin America."
   },
+  "208": {
+    "es": "Poás alberga el Parque Nacional Volcán Poás, cuyo cráter activo es uno de los más grandes del mundo.",
+    "en": "Poás is home to Poás Volcano National Park, whose active crater is one of the largest in the world."
+  },
+  "209": {
+    "es": "Orotina celebra cada mayo la Feria Nacional de las Frutas, un festival agrícola que reúne la diversidad frutícola del país.",
+    "en": "Every May, Orotina hosts the national Feria de las Frutas, an agricultural festival celebrating the country's fruit diversity."
+  },
   "210": {
     "es": "San Carlos es el cantón más extenso de Costa Rica, con más de 3 300 km².",
     "en": "San Carlos is Costa Rica's largest canton, spanning more than 3,300 km²."
+  },
+  "211": {
+    "es": "El Parque Francisco Alvarado de Zarcero es famoso por sus arbustos de ciprés podados en figuras desde 1964.",
+    "en": "Zarcero's Parque Francisco Alvarado is famous for its cypress bushes, hand-sculpted into whimsical shapes since 1964."
+  },
+  "212": {
+    "es": "Sarchí es la cuna de la carreta típica costarricense; su pintura y el boyeo fueron declarados Patrimonio Cultural Inmaterial de la Humanidad por la UNESCO en 2005.",
+    "en": "Sarchí is the birthplace of the traditional Costa Rican ox cart; its painting style and the related ox-driving tradition were declared UNESCO Intangible Cultural Heritage in 2005."
   },
   "216": {
     "es": "Río Cuarto, creado en 2017, fue el primer cantón nuevo del país en casi dos décadas.",
@@ -23,20 +55,68 @@
     "es": "Cartago fue la capital de Costa Rica hasta 1823 y alberga la Basílica de Nuestra Señora de los Ángeles, destino de la romería más grande del país.",
     "en": "Cartago was Costa Rica's capital until 1823 and is home to the Basilica of Our Lady of the Angels, destination of the country's largest pilgrimage."
   },
+  "302": {
+    "es": "Paraíso alberga el Jardín Botánico Lankester, con cerca de mil especies de orquídeas catalogadas.",
+    "en": "Paraíso is home to the Lankester Botanical Garden, with nearly a thousand catalogued orchid species."
+  },
+  "305": {
+    "es": "Turrialba reúne el Monumento Nacional Guayabo, el sitio arqueológico precolombino más importante del país, junto al volcán Turrialba y el centro de investigación CATIE.",
+    "en": "Turrialba is home to the Guayabo National Monument, the country's most important pre-Columbian archaeological site, alongside Turrialba Volcano and the CATIE research center."
+  },
   "401": {
     "es": "Heredia es conocida como la «Ciudad de las Flores».",
     "en": "Heredia is known as the “City of Flowers.”"
+  },
+  "402": {
+    "es": "El centro de Barva conserva una iglesia y un trazado urbano de la época colonial entre los mejor preservados del país.",
+    "en": "Barva's town center preserves a colonial-era church and street layout among the best-preserved in the country."
+  },
+  "410": {
+    "es": "Sarapiquí alberga la Estación Biológica La Selva, fundada en 1954 y dedicada a la investigación del bosque tropical lluvioso.",
+    "en": "Sarapiquí is home to La Selva Biological Station, founded in 1954 and dedicated to tropical rainforest research."
   },
   "501": {
     "es": "Liberia es llamada la «Ciudad Blanca» por sus tradicionales casas de adobe encalado y calles de polvo blanco.",
     "en": "Liberia is called the “White City” for its traditional whitewashed adobe houses and white-dust streets."
   },
+  "502": {
+    "es": "La península de Nicoya, con cabecera en este cantón, es una de las cinco «zonas azules» del mundo, regiones con una longevidad excepcionalmente alta.",
+    "en": "The Nicoya Peninsula, seated in this canton, is one of the world's five «Blue Zones» — regions with exceptionally high longevity."
+  },
+  "503": {
+    "es": "Santa Cruz fue declarada «Ciudad Folclórica de Costa Rica» por decreto en 1974.",
+    "en": "Santa Cruz was declared «Costa Rica's Folkloric City» by decree in 1974."
+  },
+  "508": {
+    "es": "Los vientos constantes del lago Arenal han hecho de Tilarán un destino reconocido para el windsurf y el kitesurf.",
+    "en": "Lake Arenal's steady winds have made Tilarán a renowned windsurfing and kitesurfing destination."
+  },
   "601": {
     "es": "Al cantón de Puntarenas pertenece la Isla del Coco, Patrimonio de la Humanidad de la UNESCO, a unos 500 km de la costa del Pacífico.",
     "en": "The canton of Puntarenas includes Cocos Island, a UNESCO World Heritage Site some 500 km off the Pacific coast."
   },
+  "605": {
+    "es": "El Parque Nacional Corcovado, en el cantón de Osa, ha sido descrito por National Geographic como «el lugar biológicamente más intenso del planeta».",
+    "en": "Corcovado National Park, in the canton of Osa, has been described by National Geographic as «the most biologically intense place on Earth»."
+  },
+  "606": {
+    "es": "Quepos es la puerta de entrada al Parque Nacional Manuel Antonio, uno de los más visitados del país.",
+    "en": "Quepos is the gateway to Manuel Antonio National Park, one of the country's most visited."
+  },
+  "607": {
+    "es": "Golfito fue el puerto bananero centralizado de la United Fruit Company en el Pacífico Sur entre 1941 y 1984.",
+    "en": "Golfito served as the United Fruit Company's centralized banana port on the South Pacific coast from 1941 to 1984."
+  },
   "612": {
     "es": "Monteverde, famoso por su bosque nuboso, se convirtió en cantón en 2021.",
     "en": "Monteverde, famous for its cloud forest, became a canton in 2021."
+  },
+  "701": {
+    "es": "Cerca de Puerto Limón desembarcó Cristóbal Colón en 1502, durante su cuarto y último viaje a América.",
+    "en": "Christopher Columbus landed near present-day Puerto Limón in 1502, during his fourth and final voyage to the Americas."
+  },
+  "704": {
+    "es": "Talamanca alberga el Parque Internacional La Amistad, Patrimonio de la Humanidad de la UNESCO compartido con Panamá, y los territorios indígenas bribri y cabécar.",
+    "en": "Talamanca is home to La Amistad International Park, a UNESCO World Heritage Site shared with Panama, and the Bribri and Cabécar indigenous territories."
   }
 }

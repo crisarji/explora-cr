@@ -12,4 +12,4 @@ Rules for adding facts:
 - This file is NOT produced by `pnpm run build:topo` — it survives data
   regeneration.
 
-Coverage so far: 10 of 84 cantons. Contributions welcome.
+Coverage so far: 30 of 84 cantons. Contributions welcome.
