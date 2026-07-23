@@ -6,7 +6,7 @@ import { THEME_INIT_SCRIPT } from "@/lib/theme";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://explora-cr.vercel.app"),
+  metadataBase: new URL("https://explora-cr.com"),
   title: {
     default: "Explora Costa Rica",
     template: "%s · Explora Costa Rica",

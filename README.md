@@ -4,7 +4,7 @@ Interactive, animated map of Costa Rica's **7 provinces, 84 cantons, and 494
 districts**. A free social-service and learning project — open data, open
 source, zero hosting cost.
 
-**Live:** https://explora-cr.vercel.app
+**Live:** https://explora-cr.com
 
 ![Mapa de las provincias de Costa Rica](docs/mapa.svg)
 
@@ -17,7 +17,7 @@ source, zero hosting cost.
   and shareable (`/alajuela/grecia/tacares`).
 - **Cmd+K search** — fuzzy, accent-insensitive search over every region;
   selecting a result flies the camera there.
-- **"¿Cuál es este cantón?"** — a quiz mode ([/juego](https://explora-cr.vercel.app/juego))
+- **"¿Cuál es este cantón?"** — a quiz mode ([/juego](https://explora-cr.com/juego))
   that shows a highlighted canton and four choices. The educational star
   feature.
 - **ES/EN toggle**, dark mode, `prefers-reduced-motion` fallbacks, and an

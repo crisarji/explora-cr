@@ -2,7 +2,7 @@
 
 An interactive, animated map of Costa Rica's territorial divisions — 7 provinces, 84 cantons, and ~490 districts — built as a free social service and a personal learning project.
 
-**Live site:** https://explora-cr.vercel.app
+**Live site:** https://explora-cr.com
 
 ---
 
