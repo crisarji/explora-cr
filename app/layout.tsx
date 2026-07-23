@@ -34,6 +34,15 @@ export default function RootLayout({
         </main>
         <footer className="border-t border-borde bg-lienzo px-6 py-2.5 text-center text-xs text-suave md:fixed md:inset-x-0 md:bottom-0 md:z-30">
           <T k="footer.texto" />
+          {" · "}
+          <a
+            href="https://github.com/crisarji"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-acento hover:underline"
+          >
+            <T k="footer.creadoPor" /> @crisarji
+          </a>
         </footer>
         <Analytics />
       </body>

@@ -33,6 +33,7 @@ const STRINGS = {
     "compartir.copiado": "Enlace copiado",
     "facto.titulo": "¿Sabías que…?",
     "footer.texto": "Proyecto de servicio social · datos abiertos",
+    "footer.creadoPor": "por",
     "home.intro":
       "Explora las divisiones territoriales del país. Haz clic en una provincia para acercarte.",
     "prov.intro": "Haz clic en un cantón para acercarte.",
@@ -95,6 +96,7 @@ const STRINGS = {
     "compartir.copiado": "Link copied",
     "facto.titulo": "Did you know…?",
     "footer.texto": "A free public-service project · open data",
+    "footer.creadoPor": "by",
     "home.intro":
       "Explore the country's territorial divisions. Click a province to zoom in.",
     "prov.intro": "Click a canton to zoom in.",
