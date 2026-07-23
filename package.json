@@ -43,5 +43,10 @@
     "tailwindcss": "4.3.2",
     "tsx": "4.23.1",
     "typescript": "5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": "8.5.22"
+    }
   }
 }
